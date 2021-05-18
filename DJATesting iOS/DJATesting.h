@@ -1,6 +1,6 @@
 //
 //  DJATesting.h
-//  DJATesting
+//  DJATesting iOS
 //
 //  Created by Stephen Anthony on 18/05/2021.
 //
