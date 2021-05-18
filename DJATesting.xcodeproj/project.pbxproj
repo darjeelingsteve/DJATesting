@@ -11,6 +11,8 @@
 		48D0D6CE26543D1F00538973 /* UIView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6CD26543D1F00538973 /* UIView+Testing.swift */; };
 		48D0D6D226543E8200538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6D126543E8200538973 /* UIControl+Testing.swift */; };
 		48D0D6D626543F2800538973 /* UIImage+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6D526543F2800538973 /* UIImage+Testing.swift */; };
+		48D0D6DD2654407B00538973 /* UIGestureRecognizer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6DB2654407B00538973 /* UIGestureRecognizer+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D0D6DE2654407B00538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6DC2654407B00538973 /* UIGestureRecognizer+Testing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		48D0D6CD26543D1F00538973 /* UIView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6D126543E8200538973 /* UIControl+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6D526543F2800538973 /* UIImage+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Testing.swift"; sourceTree = "<group>"; };
+		48D0D6DB2654407B00538973 /* UIGestureRecognizer+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Testing.h"; sourceTree = "<group>"; };
+		48D0D6DC2654407B00538973 /* UIGestureRecognizer+Testing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Testing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				48D0D6D126543E8200538973 /* UIControl+Testing.swift */,
 				48D0D6D526543F2800538973 /* UIImage+Testing.swift */,
 				48D0D6CD26543D1F00538973 /* UIView+Testing.swift */,
+				48D0D6DB2654407B00538973 /* UIGestureRecognizer+Testing.h */,
+				48D0D6DC2654407B00538973 /* UIGestureRecognizer+Testing.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -77,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D0D6C626543B5500538973 /* DJATesting.h in Headers */,
+				48D0D6DD2654407B00538973 /* UIGestureRecognizer+Testing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +157,7 @@
 			files = (
 				48D0D6D226543E8200538973 /* UIControl+Testing.swift in Sources */,
 				48D0D6CE26543D1F00538973 /* UIView+Testing.swift in Sources */,
+				48D0D6DE2654407B00538973 /* UIGestureRecognizer+Testing.m in Sources */,
 				48D0D6D626543F2800538973 /* UIImage+Testing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

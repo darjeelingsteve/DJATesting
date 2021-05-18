@@ -15,4 +15,4 @@ FOUNDATION_EXPORT const unsigned char DJATestingVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DJATesting/PublicHeader.h>
 
-
+#import <DJATesting/UIGestureRecognizer+Testing.h>
