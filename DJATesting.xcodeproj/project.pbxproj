@@ -14,6 +14,13 @@
 		48D0D6F0265445A500538973 /* UIView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EA265445A500538973 /* UIView+Testing.swift */; };
 		48D0D6F1265445A500538973 /* UIGestureRecognizer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6F2265445A500538973 /* Decodable+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EC265445A500538973 /* Decodable+Testing.swift */; };
+		48D0D7042654471A00538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D7022654471A00538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
+		48D0D70F2654476400538973 /* UIImage+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E9265445A500538973 /* UIImage+Testing.swift */; };
+		48D0D7122654477600538973 /* UIView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EA265445A500538973 /* UIView+Testing.swift */; };
+		48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EC265445A500538973 /* Decodable+Testing.swift */; };
+		48D0D7182654477D00538973 /* UIGestureRecognizer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +33,20 @@
 		48D0D6EA265445A500538973 /* UIView+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Testing.h"; sourceTree = "<group>"; };
 		48D0D6EC265445A500538973 /* Decodable+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Testing.swift"; sourceTree = "<group>"; };
+		48D0D7002654471A00538973 /* DJATesting_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D0D7022654471A00538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
+		48D0D7032654471A00538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		48D0D6BE26543B5500538973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D0D6FD2654471A00538973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +61,7 @@
 			children = (
 				48D0D6E5265445A500538973 /* Sources */,
 				48D0D6C326543B5500538973 /* DJATesting iOS */,
+				48D0D7012654471A00538973 /* DJATesting tvOS */,
 				48D0D6C226543B5500538973 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				48D0D6C126543B5500538973 /* DJATesting.framework */,
+				48D0D7002654471A00538973 /* DJATesting_tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +105,15 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		48D0D7012654471A00538973 /* DJATesting tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				48D0D7022654471A00538973 /* DJATesting.h */,
+				48D0D7032654471A00538973 /* Info.plist */,
+			);
+			path = "DJATesting tvOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -95,6 +123,15 @@
 			files = (
 				48D0D6C626543B5500538973 /* DJATesting.h in Headers */,
 				48D0D6F1265445A500538973 /* UIGestureRecognizer+Testing.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D0D6FB2654471A00538973 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D0D7042654471A00538973 /* DJATesting.h in Headers */,
+				48D0D7182654477D00538973 /* UIGestureRecognizer+Testing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +156,24 @@
 			productReference = 48D0D6C126543B5500538973 /* DJATesting.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		48D0D6FF2654471A00538973 /* DJATesting tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D0D7052654471A00538973 /* Build configuration list for PBXNativeTarget "DJATesting tvOS" */;
+			buildPhases = (
+				48D0D6FB2654471A00538973 /* Headers */,
+				48D0D6FC2654471A00538973 /* Sources */,
+				48D0D6FD2654471A00538973 /* Frameworks */,
+				48D0D6FE2654471A00538973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DJATesting tvOS";
+			productName = "DJATesting tvOS";
+			productReference = 48D0D7002654471A00538973 /* DJATesting_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,6 +185,9 @@
 					48D0D6C026543B5500538973 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
+					};
+					48D0D6FF2654471A00538973 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -147,12 +205,20 @@
 			projectRoot = "";
 			targets = (
 				48D0D6C026543B5500538973 /* DJATesting iOS */,
+				48D0D6FF2654471A00538973 /* DJATesting tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		48D0D6BF26543B5500538973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D0D6FE2654471A00538973 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -171,6 +237,18 @@
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
 				48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */,
 				48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D0D6FC2654471A00538973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D0D7122654477600538973 /* UIView+Testing.swift in Sources */,
+				48D0D70F2654476400538973 /* UIImage+Testing.swift in Sources */,
+				48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */,
+				48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */,
+				48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +428,56 @@
 			};
 			name = Release;
 		};
+		48D0D7062654471A00538973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "DJATesting tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.DJATesting-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		48D0D7072654471A00538973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "DJATesting tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.DJATesting-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -367,6 +495,15 @@
 			buildConfigurations = (
 				48D0D6CA26543B5500538973 /* Debug */,
 				48D0D6CB26543B5500538973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48D0D7052654471A00538973 /* Build configuration list for PBXNativeTarget "DJATesting tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D0D7062654471A00538973 /* Debug */,
+				48D0D7072654471A00538973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
