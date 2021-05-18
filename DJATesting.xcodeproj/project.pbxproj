@@ -13,6 +13,7 @@
 		48D0D6D626543F2800538973 /* UIImage+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6D526543F2800538973 /* UIImage+Testing.swift */; };
 		48D0D6DD2654407B00538973 /* UIGestureRecognizer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6DB2654407B00538973 /* UIGestureRecognizer+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6DE2654407B00538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6DC2654407B00538973 /* UIGestureRecognizer+Testing.m */; };
+		48D0D6E22654429600538973 /* Decodable+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E12654429600538973 /* Decodable+Testing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		48D0D6D526543F2800538973 /* UIImage+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6DB2654407B00538973 /* UIGestureRecognizer+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Testing.h"; sourceTree = "<group>"; };
 		48D0D6DC2654407B00538973 /* UIGestureRecognizer+Testing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Testing.m"; sourceTree = "<group>"; };
+		48D0D6E12654429600538973 /* Decodable+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Testing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				48D0D6D92654405100538973 /* UIKit */,
+				48D0D6E12654429600538973 /* Decodable+Testing.swift */,
 				48D0D6C426543B5500538973 /* DJATesting.h */,
 				48D0D6C526543B5500538973 /* Info.plist */,
 			);
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D0D6E22654429600538973 /* Decodable+Testing.swift in Sources */,
 				48D0D6D226543E8200538973 /* UIControl+Testing.swift in Sources */,
 				48D0D6CE26543D1F00538973 /* UIView+Testing.swift in Sources */,
 				48D0D6DE2654407B00538973 /* UIGestureRecognizer+Testing.m in Sources */,
