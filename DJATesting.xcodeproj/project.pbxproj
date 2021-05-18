@@ -52,13 +52,21 @@
 		48D0D6C326543B5500538973 /* DJATesting */ = {
 			isa = PBXGroup;
 			children = (
-				48D0D6D126543E8200538973 /* UIControl+Testing.swift */,
-				48D0D6D526543F2800538973 /* UIImage+Testing.swift */,
-				48D0D6CD26543D1F00538973 /* UIView+Testing.swift */,
+				48D0D6D92654405100538973 /* UIKit */,
 				48D0D6C426543B5500538973 /* DJATesting.h */,
 				48D0D6C526543B5500538973 /* Info.plist */,
 			);
 			path = DJATesting;
+			sourceTree = "<group>";
+		};
+		48D0D6D92654405100538973 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				48D0D6D126543E8200538973 /* UIControl+Testing.swift */,
+				48D0D6D526543F2800538973 /* UIImage+Testing.swift */,
+				48D0D6CD26543D1F00538973 /* UIView+Testing.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
