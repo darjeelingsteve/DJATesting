@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		48D0D6C626543B5500538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6C426543B5500538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D0D6CE26543D1F00538973 /* UIView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6CD26543D1F00538973 /* UIView+Testing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48D0D6C126543B5500538973 /* DJATesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D0D6C426543B5500538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
 		48D0D6C526543B5500538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D0D6CD26543D1F00538973 /* UIView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Testing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		48D0D6C326543B5500538973 /* DJATesting */ = {
 			isa = PBXGroup;
 			children = (
+				48D0D6CD26543D1F00538973 /* UIView+Testing.swift */,
 				48D0D6C426543B5500538973 /* DJATesting.h */,
 				48D0D6C526543B5500538973 /* Info.plist */,
 			);
@@ -94,6 +97,7 @@
 				TargetAttributes = {
 					48D0D6C026543B5500538973 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D0D6CE26543D1F00538973 /* UIView+Testing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +266,7 @@
 		48D0D6CA26543B5500538973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.darjeeling.DJATesting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		48D0D6CB26543B5500538973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
