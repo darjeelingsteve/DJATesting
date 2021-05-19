@@ -14,7 +14,7 @@ public extension UIImage {
     ///   - colour: The colour of the image.
     ///   - size: The size of the image.
     /// - Returns: An image of the given colour and size.
-    func image(ofColour colour: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+    static func image(ofColour colour: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { rendererContext in
             colour.setFill()
             rendererContext.fill(CGRect(origin: .zero, size: size))
