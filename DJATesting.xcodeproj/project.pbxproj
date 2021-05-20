@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
+		481F44DB26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
 		48D0D6C626543B5500538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6C426543B5500538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
 		48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
@@ -24,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		481F44D926566E5E00618F4A /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		48D0D6C126543B5500538973 /* DJATesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D0D6C426543B5500538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
 		48D0D6C526543B5500538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		48D0D6E6265445A500538973 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				481F44D926566E5E00618F4A /* MockNavigationController.swift */,
 				48D0D6E7265445A500538973 /* UIControl+Testing.swift */,
 				48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */,
 				48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */,
@@ -237,6 +241,7 @@
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
 				48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */,
 				48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */,
+				481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +254,7 @@
 				48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */,
 				48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */,
 				48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */,
+				481F44DB26566E5E00618F4A /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
