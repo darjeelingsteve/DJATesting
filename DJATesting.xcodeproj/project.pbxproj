@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		48145D69265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D68265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift */; };
 		48145D6A265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D68265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift */; };
+		48145D6E265C0178002B351C /* MockTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D6D265C0178002B351C /* MockTransitionCoordinator.swift */; };
+		48145D6F265C0178002B351C /* MockTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D6D265C0178002B351C /* MockTransitionCoordinator.swift */; };
 		481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
 		481F44DB26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
 		48D0D6C626543B5500538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6C426543B5500538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		48145D68265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewControllerTransitionCoordinatorContext.swift; sourceTree = "<group>"; };
+		48145D6D265C0178002B351C /* MockTransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionCoordinator.swift; sourceTree = "<group>"; };
 		481F44D926566E5E00618F4A /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		48D0D6C126543B5500538973 /* DJATesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D0D6C426543B5500538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				481F44D926566E5E00618F4A /* MockNavigationController.swift */,
+				48145D6D265C0178002B351C /* MockTransitionCoordinator.swift */,
 				48145D68265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift */,
 			);
 			path = Mocks;
@@ -251,6 +255,7 @@
 				48D0D6F2265445A500538973 /* Decodable+Testing.swift in Sources */,
 				48D0D6F0265445A500538973 /* UIView+Testing.swift in Sources */,
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
+				48145D6E265C0178002B351C /* MockTransitionCoordinator.swift in Sources */,
 				48145D69265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
 				48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */,
 				48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */,
@@ -265,6 +270,7 @@
 				48D0D7122654477600538973 /* UIView+Testing.swift in Sources */,
 				48D0D70F2654476400538973 /* UIImage+Testing.swift in Sources */,
 				48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */,
+				48145D6F265C0178002B351C /* MockTransitionCoordinator.swift in Sources */,
 				48145D6A265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
 				48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */,
 				48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */,
