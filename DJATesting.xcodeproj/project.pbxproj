@@ -59,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48145D67265C00DE002B351C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				481F44D926566E5E00618F4A /* MockNavigationController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		48D0D6B726543B5500538973 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +107,7 @@
 		48D0D6E6265445A500538973 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				481F44D926566E5E00618F4A /* MockNavigationController.swift */,
+				48145D67265C00DE002B351C /* Mocks */,
 				48D0D6E7265445A500538973 /* UIControl+Testing.swift */,
 				48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */,
 				48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */,
