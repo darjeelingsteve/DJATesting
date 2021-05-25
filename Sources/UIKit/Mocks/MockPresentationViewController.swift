@@ -11,11 +11,14 @@ import UIKit
 /// `presentedViewController`, and captures view controllers it is asked to
 /// present.
 public class MockPresentationViewController<T: UIViewController>: UIViewController {
+    
+    /// The view controller that the receiver will return from
+    /// `presentedViewController`.
+    public let overriddenPresentedViewController: T
+    
     public override var presentedViewController: UIViewController? {
         return overriddenPresentedViewController
     }
-    
-    private let overriddenPresentedViewController: T
     
     /// Initialises a mock presentation view controller with the given view
     /// controller as its `presentedViewController`.
