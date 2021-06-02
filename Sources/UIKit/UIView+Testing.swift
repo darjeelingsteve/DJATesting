@@ -62,6 +62,46 @@ public extension UIView {
     }
 }
 
+// MARK: - Pixel Colour Testing
+public extension UIView {
+    
+    /// Returns the colour of the pixel at the given point in the receiver's
+    /// coordinate space, drawn at 1x scale.
+    /// - Parameter point: The point whose pixel colour we wish to retrieve.
+    /// - Returns: The colour of the pixel at the given point.
+    func pixelColour(atPoint point: CGPoint) -> UIColor {
+        let imageRepresentation = self.imageRepresentation()
+        let pointer = CFDataGetBytePtr(imageRepresentation.dataProvider!.data)!
+        let offset = Int(4 * (point.y * bounds.width + point.x))
+        
+        let red = pointer[offset]
+        let green = pointer[offset + 1]
+        let blue = pointer[offset + 2]
+        let alpha = pointer[offset + 3]
+        return UIColor(red: CGFloat(red) / 255.0,
+                       green: CGFloat(green) / 255.0,
+                       blue: CGFloat(blue) / 255.0,
+                       alpha: CGFloat(alpha) / 255.0)
+    }
+    
+    private func imageRepresentation() -> CGImage {
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        let context = CGContext(data: nil,
+                                width: Int(bounds.size.width),
+                                height: Int(bounds.size.height),
+                                bitsPerComponent: 8,
+                                bytesPerRow: Int(bounds.size.width) * 4,
+                                space: colorSpace,
+                                bitmapInfo: UInt32(bitmapInfo.rawValue))!
+        UIGraphicsPushContext(context)
+        draw(bounds)
+        let image = context.makeImage()!
+        UIGraphicsPopContext()
+        return image
+    }
+}
+
 public extension Array where Element: UIView {
     
     /// - Returns: A copy of the receiver with the elements ordered leftmost to
