@@ -27,6 +27,8 @@
 		48A311A326676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */; };
 		48A311A726676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
 		48A311A826676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
+		48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
+		48A311AF266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
 		48D0D6C626543B5500538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6C426543B5500538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
 		48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
@@ -54,6 +56,7 @@
 		489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Testing.swift"; sourceTree = "<group>"; };
 		48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSelectionFeedbackGenerator.swift; sourceTree = "<group>"; };
 		48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImpactFeedbackGenerator.swift; sourceTree = "<group>"; };
+		48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationFeedbackGenerator.swift; sourceTree = "<group>"; };
 		48D0D6C126543B5500538973 /* DJATesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D0D6C426543B5500538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
 		48D0D6C526543B5500538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */,
+				48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */,
 				48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */,
 			);
 			path = "Feedback Generators";
@@ -303,6 +307,7 @@
 				481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */,
 				48145D73265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */,
 				489AE700265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */,
+				48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +330,7 @@
 				481F44DB26566E5E00618F4A /* MockNavigationController.swift in Sources */,
 				48145D74265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */,
 				489AE701265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */,
+				48A311AF266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
