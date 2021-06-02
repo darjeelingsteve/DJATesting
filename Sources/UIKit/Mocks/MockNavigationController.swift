@@ -37,4 +37,10 @@ public class MockNavigationController: UINavigationController {
         receivedPopToRootViewControllerMessage = true
         return super.popToRootViewController(animated: animated)
     }
+    
+    private(set) public var receivedViewControllerForPresentation: UIViewController?
+    public override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        receivedViewControllerForPresentation = viewControllerToPresent
+        super.present(viewControllerToPresent, animated: flag, completion: completion)
+    }
 }
