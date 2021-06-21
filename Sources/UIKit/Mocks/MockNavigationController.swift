@@ -52,6 +52,14 @@ public class MockNavigationController: UINavigationController {
         super.dismiss(animated: flag, completion: completion)
     }
     
+    /// The view controller that the receiver will return from
+    /// `presentedViewController`, if any.
+    public var overriddenPresentedViewController: UIViewController?
+    
+    public override var presentedViewController: UIViewController? {
+        return overriddenPresentedViewController ?? super.presentedViewController
+    }
+    
     /// The mock transition coordinator returned by the receiver's
     /// `transitionCoordinator` property.
     public let mockTransitionCoordinator = MockTransitionCoordinator()
