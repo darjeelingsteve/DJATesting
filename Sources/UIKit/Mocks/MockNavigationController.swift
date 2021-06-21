@@ -51,4 +51,12 @@ public class MockNavigationController: UINavigationController {
         receivedDismissalCompletionClosure = completion
         super.dismiss(animated: flag, completion: completion)
     }
+    
+    /// The mock transition coordinator returned by the receiver's
+    /// `transitionCoordinator` property.
+    public let mockTransitionCoordinator = MockTransitionCoordinator()
+    
+    public override var transitionCoordinator: UIViewControllerTransitionCoordinator? {
+        return mockTransitionCoordinator
+    }
 }
