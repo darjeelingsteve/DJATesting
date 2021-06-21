@@ -21,4 +21,12 @@ public class MockTabBarController: UITabBarController {
         receivedViewControllerForPresentation = viewControllerToPresent
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
+    
+    private(set) public var receivedDismissalAnimatedFlag: Bool?
+    private(set) public var receivedDismissalCompletionClosure: (() -> Void)?
+    public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        receivedDismissalAnimatedFlag = flag
+        receivedDismissalCompletionClosure = completion
+        super.dismiss(animated: flag, completion: completion)
+    }
 }
