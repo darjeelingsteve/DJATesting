@@ -10,6 +10,7 @@ import UIKit
 /// Allows a layout container to be constructed and populated for passing to an
 /// object conforming to `NSCollectionLayoutEnvironment`.
 @available(iOS 11.0, *)
+@available(tvOS 11.0, *)
 public class MockCollectionLayoutContainer: NSObject, NSCollectionLayoutContainer {
     public let contentSize: CGSize
     public let effectiveContentSize: CGSize

@@ -7,7 +7,8 @@
 
 import UIKit
 
-@available(iOSApplicationExtension 13.0, *)
+@available(iOS 13.0, *)
+@available(tvOS 13.0, *)
 public extension NSCollectionLayoutSection {
     
     /// The receiver's layout group.
