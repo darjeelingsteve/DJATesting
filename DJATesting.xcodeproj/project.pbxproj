@@ -31,6 +31,8 @@
 		48943DAE26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAC26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift */; };
 		48943DB026B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */; };
 		48943DB126B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */; };
+		48943DB326B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */; };
+		48943DB426B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */; };
 		489AE6F9265FD54F001FFB58 /* UIAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */; };
 		489AE6FA265FD54F001FFB58 /* UIAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */; };
 		489AE700265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */; };
@@ -70,6 +72,7 @@
 		48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCompositionalLayout+Testing.swift"; sourceTree = "<group>"; };
 		48943DAC26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionLayoutEnvironment.swift; sourceTree = "<group>"; };
 		48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionLayoutContainer.swift; sourceTree = "<group>"; };
+		48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+Testing.swift"; sourceTree = "<group>"; };
 		489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAction+Testing.swift"; sourceTree = "<group>"; };
 		489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Testing.swift"; sourceTree = "<group>"; };
 		48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSelectionFeedbackGenerator.swift; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 				489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */,
 				4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */,
 				48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */,
+				48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */,
 				48D0D6E7265445A500538973 /* UIControl+Testing.swift */,
 				48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */,
 				48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */,
@@ -328,6 +332,7 @@
 				48145D69265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
 				48943DAD26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */,
 				48943DB026B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */,
+				48943DB326B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */,
 				4859EE9C2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */,
 				48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */,
 				48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */,
@@ -357,6 +362,7 @@
 				48145D6A265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
 				48943DAE26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */,
 				48943DB126B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */,
+				48943DB426B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */,
 				4859EE9D2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */,
 				48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */,
 				48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */,
