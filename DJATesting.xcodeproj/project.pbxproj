@@ -33,6 +33,8 @@
 		48943DB126B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */; };
 		48943DB326B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */; };
 		48943DB426B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */; };
+		48943DDE26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DDD26C1830700299FB4 /* TraitCollectionOverridingViewController.swift */; };
+		48943DDF26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DDD26C1830700299FB4 /* TraitCollectionOverridingViewController.swift */; };
 		489AE6F9265FD54F001FFB58 /* UIAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */; };
 		489AE6FA265FD54F001FFB58 /* UIAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */; };
 		489AE700265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */; };
@@ -73,6 +75,7 @@
 		48943DAC26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionLayoutEnvironment.swift; sourceTree = "<group>"; };
 		48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionLayoutContainer.swift; sourceTree = "<group>"; };
 		48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+Testing.swift"; sourceTree = "<group>"; };
+		48943DDD26C1830700299FB4 /* TraitCollectionOverridingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCollectionOverridingViewController.swift; sourceTree = "<group>"; };
 		489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAction+Testing.swift"; sourceTree = "<group>"; };
 		489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Testing.swift"; sourceTree = "<group>"; };
 		48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSelectionFeedbackGenerator.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 				48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */,
 				48145D82265C038D002B351C /* PresentationCapturingViewController.swift */,
 				48145D67265C00DE002B351C /* Mocks */,
+				48943DDD26C1830700299FB4 /* TraitCollectionOverridingViewController.swift */,
 				489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */,
 				489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */,
 				4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */,
@@ -328,6 +332,7 @@
 				48145D7C265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
 				48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
+				48943DDE26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */,
 				48145D6E265C0178002B351C /* MockTransitionCoordinator.swift in Sources */,
 				48145D69265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
 				48943DAD26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */,
@@ -358,6 +363,7 @@
 				48145D7D265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
 				48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */,
 				48A311A326676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
+				48943DDF26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */,
 				48145D6F265C0178002B351C /* MockTransitionCoordinator.swift in Sources */,
 				48145D6A265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
 				48943DAE26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */,
