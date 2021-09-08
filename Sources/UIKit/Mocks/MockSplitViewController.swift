@@ -30,13 +30,13 @@ public class MockSplitViewController: UISplitViewController {
         }
     }
     
-    private(set) var receivedHiddenColumn: UISplitViewController.Column?
+    private(set) public var receivedHiddenColumn: UISplitViewController.Column?
     override public func hide(_ column: UISplitViewController.Column) {
         receivedHiddenColumn = column
         super.hide(column)
     }
     
-    private(set) var receivedShownColumn: UISplitViewController.Column?
+    private(set) public var receivedShownColumn: UISplitViewController.Column?
     public override func show(_ column: UISplitViewController.Column) {
         receivedShownColumn = column
         super.show(column)
