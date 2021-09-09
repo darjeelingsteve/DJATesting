@@ -23,6 +23,8 @@
 		4859EE9D2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */; };
 		485B455E26E9446600CF1F91 /* MockSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B455D26E9446600CF1F91 /* MockSplitViewController.swift */; };
 		485B455F26E9446600CF1F91 /* MockSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B455D26E9446600CF1F91 /* MockSplitViewController.swift */; };
+		485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */; };
+		485B456526EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */; };
 		489423312680B22200855EE2 /* MockTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489423302680B22200855EE2 /* MockTabBarController.swift */; };
 		489423322680B22200855EE2 /* MockTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489423302680B22200855EE2 /* MockTabBarController.swift */; };
 		48943DA726B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */; };
@@ -72,6 +74,7 @@
 		481F44D926566E5E00618F4A /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Testing.swift"; sourceTree = "<group>"; };
 		485B455D26E9446600CF1F91 /* MockSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSplitViewController.swift; sourceTree = "<group>"; };
+		485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKeyCommand+Testing.swift"; sourceTree = "<group>"; };
 		489423302680B22200855EE2 /* MockTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTabBarController.swift; sourceTree = "<group>"; };
 		48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+Testing.swift"; sourceTree = "<group>"; };
 		48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCompositionalLayout+Testing.swift"; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 				48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */,
 				48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */,
 				48D0D6E9265445A500538973 /* UIImage+Testing.swift */,
+				485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */,
 				48D0D6EA265445A500538973 /* UIView+Testing.swift */,
 			);
 			path = UIKit;
@@ -334,6 +338,7 @@
 				489423312680B22200855EE2 /* MockTabBarController.swift in Sources */,
 				48943DA726B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */,
 				48145D7C265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
+				485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */,
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
 				48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
 				48943DDE26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */,
@@ -366,6 +371,7 @@
 				489423322680B22200855EE2 /* MockTabBarController.swift in Sources */,
 				48943DA826B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */,
 				48145D7D265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
+				485B456526EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */,
 				48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */,
 				48A311A326676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
 				48943DDF26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */,
