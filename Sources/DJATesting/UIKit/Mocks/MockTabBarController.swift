@@ -9,16 +9,18 @@ import UIKit
 
 public class MockTabBarController: UITabBarController {
     private(set) public var receivedViewControllers: [UIViewController]?
-    private(set) public var receivedViewControllersAnimationFlag: Bool?
+    private(set) public var receivedSetViewControllersAnimatedFlag: Bool?
     public override func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {
         receivedViewControllers = viewControllers
-        receivedViewControllersAnimationFlag = animated
+        receivedSetViewControllersAnimatedFlag = animated
         super.setViewControllers(viewControllers, animated: animated)
     }
     
     private(set) public var receivedViewControllerForPresentation: UIViewController?
+    private(set) public var receivedPresentViewControllerAnimatedFlag: Bool?
     public override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         receivedViewControllerForPresentation = viewControllerToPresent
+        receivedPresentViewControllerAnimatedFlag = flag
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     

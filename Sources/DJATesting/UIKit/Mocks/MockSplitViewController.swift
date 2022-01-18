@@ -43,8 +43,10 @@ public class MockSplitViewController: UISplitViewController {
     }
     
     private(set) public var receivedViewControllerForPresentation: UIViewController?
+    private(set) public var receivedPresentViewControllerAnimatedFlag: Bool?
     public override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         receivedViewControllerForPresentation = viewControllerToPresent
+        receivedPresentViewControllerAnimatedFlag = flag
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     
