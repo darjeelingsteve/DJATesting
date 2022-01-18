@@ -28,7 +28,7 @@
 		48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */; };
 		48A311A726676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
 		48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
-		48BDDB672796AFC2004320FF /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BDDB662796AFC2004320FF /* DJATesting.h */; };
+		48BDDB672796AFC2004320FF /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BDDB662796AFC2004320FF /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
 		48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
 		48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E9265445A500538973 /* UIImage+Testing.swift */; };
