@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DJATesting tvOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>DJATesting.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +13,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>48D0D6C026543B5500538973</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>48D0D6FF2654471A00538973</key>
 		<dict>
 			<key>primary</key>
 			<true/>
