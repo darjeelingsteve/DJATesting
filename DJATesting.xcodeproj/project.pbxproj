@@ -242,9 +242,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		48D0D6C026543B5500538973 /* DJATesting iOS */ = {
+		48D0D6C026543B5500538973 /* DJATesting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48D0D6C926543B5500538973 /* Build configuration list for PBXNativeTarget "DJATesting iOS" */;
+			buildConfigurationList = 48D0D6C926543B5500538973 /* Build configuration list for PBXNativeTarget "DJATesting" */;
 			buildPhases = (
 				48D0D6BC26543B5500538973 /* Headers */,
 				48D0D6BD26543B5500538973 /* Sources */,
@@ -255,7 +255,7 @@
 			);
 			dependencies = (
 			);
-			name = "DJATesting iOS";
+			name = DJATesting;
 			productName = DJATesting;
 			productReference = 48D0D6C126543B5500538973 /* DJATesting.framework */;
 			productType = "com.apple.product-type.framework";
@@ -308,7 +308,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				48D0D6C026543B5500538973 /* DJATesting iOS */,
+				48D0D6C026543B5500538973 /* DJATesting */,
 				48D0D6FF2654471A00538973 /* DJATesting tvOS */,
 			);
 		};
@@ -648,7 +648,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48D0D6C926543B5500538973 /* Build configuration list for PBXNativeTarget "DJATesting iOS" */ = {
+		48D0D6C926543B5500538973 /* Build configuration list for PBXNativeTarget "DJATesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48D0D6CA26543B5500538973 /* Debug */,

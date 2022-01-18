@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48D0D6C026543B5500538973"
                BuildableName = "DJATesting.framework"
-               BlueprintName = "DJATesting iOS"
+               BlueprintName = "DJATesting"
                ReferencedContainer = "container:DJATesting.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -52,7 +52,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "48D0D6C026543B5500538973"
             BuildableName = "DJATesting.framework"
-            BlueprintName = "DJATesting iOS"
+            BlueprintName = "DJATesting"
             ReferencedContainer = "container:DJATesting.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
