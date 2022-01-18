@@ -37,15 +37,36 @@ public class MockTransitionCoordinator: NSObject, UIViewControllerTransitionCoor
     
     public var targetTransform: CGAffineTransform = .identity
     
-    private(set) public var receivedAnimationClosure: ((UIViewControllerTransitionCoordinatorContext) -> Void)?
-    private(set) public var receivedCompletionClosure: ((UIViewControllerTransitionCoordinatorContext) -> Void)?
+    /// The `animation` closure received by the most recent call to
+    /// `animateAlongsideTransition:completion:`.
+    private(set) public var receivedAnimateAlongsideTransitionAnimationClosure: ((UIViewControllerTransitionCoordinatorContext) -> Void)?
+    
+    /// The `completion` closure received by the most recent call to
+    /// `animateAlongsideTransition:completion:`.
+    private(set) public var receivedAnimateAlongsideTransitionCompletionClosure: ((UIViewControllerTransitionCoordinatorContext) -> Void)?
+    
     public func animate(alongsideTransition animation: ((UIViewControllerTransitionCoordinatorContext) -> Void)?, completion: ((UIViewControllerTransitionCoordinatorContext) -> Void)? = nil) -> Bool {
-        receivedAnimationClosure = animation
-        receivedCompletionClosure = completion
+        receivedAnimateAlongsideTransitionAnimationClosure = animation
+        receivedAnimateAlongsideTransitionCompletionClosure = completion
         return false
     }
     
+    /// The `view` parameter received by the most recent call to
+    /// `animateAlongsideTransitionInView:animation:completion:`.
+    private(set) public var receivedAnimateAlongsideTransitionInViewView: UIView?
+    
+    /// The `animation` closure received by the most recent call to
+    /// `animateAlongsideTransitionInView:animation:completion:`.
+    private(set) public var receivedAnimateAlongsideTransitionInViewAnimationClosure: ((UIViewControllerTransitionCoordinatorContext) -> Void)?
+    
+    /// The `completion` closure received by the most recent call to
+    /// `animateAlongsideTransitionInView:animation:completion:`.
+    private(set) public var receivedAnimateAlongsideTransitionInViewCompletionClosure: ((UIViewControllerTransitionCoordinatorContext) -> Void)?
+    
     public func animateAlongsideTransition(in view: UIView?, animation: ((UIViewControllerTransitionCoordinatorContext) -> Void)?, completion: ((UIViewControllerTransitionCoordinatorContext) -> Void)? = nil) -> Bool {
+        receivedAnimateAlongsideTransitionInViewView = view
+        receivedAnimateAlongsideTransitionInViewAnimationClosure = animation
+        receivedAnimateAlongsideTransitionInViewCompletionClosure = completion
         return false
     }
     

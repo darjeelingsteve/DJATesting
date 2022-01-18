@@ -12,9 +12,17 @@ import UIKit
 @available(iOS 11.0, *)
 @available(tvOS 11.0, *)
 public class MockCollectionLayoutContainer: NSObject, NSCollectionLayoutContainer {
+    
+    /// The content size that the receiver was initialised with.
     public let contentSize: CGSize
+    
+    /// The effective content size that the receiver was initialised with.
     public let effectiveContentSize: CGSize
+    
+    /// The content insets that the receiver was initialised with.
     public let contentInsets: NSDirectionalEdgeInsets
+    
+    /// The effective content insets that the receiver was initialised with.
     public let effectiveContentInsets: NSDirectionalEdgeInsets
 
     public init(contentSize: CGSize = .zero, effectiveContentSize: CGSize = .zero, contentInsets: NSDirectionalEdgeInsets = .zero, effectiveContentInsets: NSDirectionalEdgeInsets = .zero) {

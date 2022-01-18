@@ -34,14 +34,23 @@ public class MockPresentationViewController<T: UIViewController>: UIViewControll
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// The view controller received by the most recent call to
+    /// `-presentViewController:animated:completion:`.
     private(set) public var receivedViewControllerForPresentation: UIViewController?
+    
     public override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         receivedViewControllerForPresentation = viewControllerToPresent
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     
+    /// The `animated` flag received by the most recent call to
+    /// `dismissViewController:animated:completion:`.
     private(set) public var receivedDismissalAnimatedFlag: Bool?
+    
+    /// The `completion` closure received by the most recent call to
+    /// `dismissViewController:animated:completion:`.
     private(set) public var receivedDismissalCompletionClosure: (() -> Void)?
+    
     public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         receivedDismissalAnimatedFlag = flag
         receivedDismissalCompletionClosure = completion

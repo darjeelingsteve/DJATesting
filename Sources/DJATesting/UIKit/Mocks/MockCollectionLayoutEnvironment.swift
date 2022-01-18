@@ -12,7 +12,11 @@ import UIKit
 @available(iOS 13.0, *)
 @available(tvOS 13.0, *)
 public class MockCollectionLayoutEnvironment: NSObject, NSCollectionLayoutEnvironment {
+    
+    /// The layout container that the receiver was initialised with.
     public let container: NSCollectionLayoutContainer
+    
+    /// The trait collection that the receiver was initialised with.
     public let traitCollection: UITraitCollection
 
     public init(container: NSCollectionLayoutContainer = MockCollectionLayoutContainer(), traitCollection: UITraitCollection = UITraitCollection()) {
