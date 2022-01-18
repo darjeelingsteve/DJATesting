@@ -64,6 +64,10 @@ public class MockSplitViewController: UISplitViewController {
         super.show(column)
     }
     
+    /// A `Boolean` value indicating whether a message to
+    /// `presentViewController:animated:completion:` has been received.
+    private(set) public var receivedPresentViewControllerMessage = false
+    
     /// The view controller received by the most recent call to
     /// `-presentViewController:animated:completion:`.
     private(set) public var receivedViewControllerForPresentation: UIViewController?
@@ -72,9 +76,15 @@ public class MockSplitViewController: UISplitViewController {
     /// `presentViewController:animated:completion:`.
     private(set) public var receivedPresentViewControllerAnimatedFlag: Bool?
     
+    /// The `completion` closure received by the most recent call to
+    /// `presentViewController:animated:completion:`.
+    private(set) public var receivedPresentationCompletionClosure: (() -> Void)?
+    
     public override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        receivedPresentViewControllerMessage = true
         receivedViewControllerForPresentation = viewControllerToPresent
         receivedPresentViewControllerAnimatedFlag = flag
+        receivedPresentationCompletionClosure = completion
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     

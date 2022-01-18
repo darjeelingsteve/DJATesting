@@ -11,11 +11,28 @@ import UIKit
 /// particular type that it is asked to present.
 public class PresentationCapturingViewController<ViewControllerType: UIViewController>: UIViewController {
     
-    /// The view controller that the receiver was asked to present.
-    private(set) public var presentedController: ViewControllerType?
+    /// A `Boolean` value indicating whether a message to
+    /// `presentViewController:animated:completion:` has been received.
+    private(set) public var receivedPresentViewControllerMessage = false
     
-    public override func present(_ viewControllerToPresent: UIViewController, animated _: Bool, completion _: (() -> Void)? = nil) {
-        presentedController = viewControllerToPresent as? ViewControllerType
+    /// The view controller received by the most recent call to
+    /// `-presentViewController:animated:completion:`.
+    private(set) public var receivedViewControllerForPresentation: ViewControllerType?
+    
+    /// The `animated` flag received by the most recent call to
+    /// `presentViewController:animated:completion:`.
+    private(set) public var receivedPresentViewControllerAnimatedFlag: Bool?
+    
+    /// The `completion` closure received by the most recent call to
+    /// `presentViewController:animated:completion:`.
+    private(set) public var receivedPresentationCompletionClosure: (() -> Void)?
+    
+    public override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        receivedPresentViewControllerMessage = true
+        receivedViewControllerForPresentation = viewControllerToPresent as? ViewControllerType
+        receivedPresentViewControllerAnimatedFlag = flag
+        receivedPresentationCompletionClosure = completion
+        super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     
     /// A `Boolean` value indicating whether a message to
