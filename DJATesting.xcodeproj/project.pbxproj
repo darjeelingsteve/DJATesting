@@ -409,7 +409,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.13.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.DJATesting-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.darjeeling.DJATesting;
 				PRODUCT_NAME = DJATesting;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator";
@@ -439,7 +439,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.13.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.DJATesting-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.darjeeling.DJATesting;
 				PRODUCT_NAME = DJATesting;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator";
