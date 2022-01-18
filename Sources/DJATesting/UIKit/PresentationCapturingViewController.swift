@@ -18,8 +18,22 @@ public class PresentationCapturingViewController<ViewControllerType: UIViewContr
         presentedController = viewControllerToPresent as? ViewControllerType
     }
     
+    /// A `Boolean` value indicating whether a message to
+    /// `dismissViewController:animated:completion:` has been received.
     private(set) public var receivedDismissMessage = false
+    
+    /// The `animated` flag received by the most recent call to
+    /// `dismissViewController:animated:completion:`.
+    private(set) public var receivedDismissalAnimatedFlag: Bool?
+    
+    /// The `completion` closure received by the most recent call to
+    /// `dismissViewController:animated:completion:`.
+    private(set) public var receivedDismissalCompletionClosure: (() -> Void)?
+    
     public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         receivedDismissMessage = true
+        receivedDismissalAnimatedFlag = flag
+        receivedDismissalCompletionClosure = completion
+        super.dismiss(animated: flag, completion: completion)
     }
 }
