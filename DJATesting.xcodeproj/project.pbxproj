@@ -8,47 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		48145D69265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D68265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift */; };
-		48145D6A265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D68265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift */; };
 		48145D6E265C0178002B351C /* MockTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D6D265C0178002B351C /* MockTransitionCoordinator.swift */; };
-		48145D6F265C0178002B351C /* MockTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D6D265C0178002B351C /* MockTransitionCoordinator.swift */; };
 		48145D73265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D72265C0225002B351C /* MockTransitionCoordinatingViewController.swift */; };
-		48145D74265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D72265C0225002B351C /* MockTransitionCoordinatingViewController.swift */; };
 		48145D7C265C02B4002B351C /* MockPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D7B265C02B4002B351C /* MockPresentationViewController.swift */; };
-		48145D7D265C02B4002B351C /* MockPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D7B265C02B4002B351C /* MockPresentationViewController.swift */; };
 		48145D83265C038D002B351C /* PresentationCapturingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D82265C038D002B351C /* PresentationCapturingViewController.swift */; };
-		48145D84265C038D002B351C /* PresentationCapturingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D82265C038D002B351C /* PresentationCapturingViewController.swift */; };
 		481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
-		481F44DB26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
 		4859EE9C2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */; };
-		4859EE9D2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */; };
 		485B455E26E9446600CF1F91 /* MockSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B455D26E9446600CF1F91 /* MockSplitViewController.swift */; };
-		485B455F26E9446600CF1F91 /* MockSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B455D26E9446600CF1F91 /* MockSplitViewController.swift */; };
 		485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */; };
-		485B456526EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */; };
 		489423312680B22200855EE2 /* MockTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489423302680B22200855EE2 /* MockTabBarController.swift */; };
-		489423322680B22200855EE2 /* MockTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489423302680B22200855EE2 /* MockTabBarController.swift */; };
 		48943DA726B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */; };
-		48943DA826B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */; };
 		48943DAA26B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */; };
-		48943DAB26B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */; };
 		48943DAD26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAC26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift */; };
-		48943DAE26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAC26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift */; };
 		48943DB026B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */; };
-		48943DB126B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DAF26B9721300299FB4 /* MockCollectionLayoutContainer.swift */; };
 		48943DB326B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */; };
-		48943DB426B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */; };
 		48943DDE26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DDD26C1830700299FB4 /* TraitCollectionOverridingViewController.swift */; };
-		48943DDF26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DDD26C1830700299FB4 /* TraitCollectionOverridingViewController.swift */; };
 		489AE6F9265FD54F001FFB58 /* UIAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */; };
-		489AE6FA265FD54F001FFB58 /* UIAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6F8265FD54F001FFB58 /* UIAction+Testing.swift */; };
 		489AE700265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */; };
-		489AE701265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489AE6FF265FD601001FFB58 /* UIAlertAction+Testing.swift */; };
 		48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */; };
-		48A311A326676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */; };
 		48A311A726676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
-		48A311A826676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
 		48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
-		48A311AF266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
 		48BDDB672796AFC2004320FF /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BDDB662796AFC2004320FF /* DJATesting.h */; };
 		48D0D6C626543B5500538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6C426543B5500538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
@@ -57,13 +36,6 @@
 		48D0D6F0265445A500538973 /* UIView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EA265445A500538973 /* UIView+Testing.swift */; };
 		48D0D6F1265445A500538973 /* UIGestureRecognizer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6F2265445A500538973 /* Decodable+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EC265445A500538973 /* Decodable+Testing.swift */; };
-		48D0D7042654471A00538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D7022654471A00538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
-		48D0D70F2654476400538973 /* UIImage+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E9265445A500538973 /* UIImage+Testing.swift */; };
-		48D0D7122654477600538973 /* UIView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EA265445A500538973 /* UIView+Testing.swift */; };
-		48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6EC265445A500538973 /* Decodable+Testing.swift */; };
-		48D0D7182654477D00538973 /* UIGestureRecognizer+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,20 +70,12 @@
 		48D0D6EA265445A500538973 /* UIView+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Testing.h"; sourceTree = "<group>"; };
 		48D0D6EC265445A500538973 /* Decodable+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Testing.swift"; sourceTree = "<group>"; };
-		48D0D7002654471A00538973 /* DJATesting_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D0D7022654471A00538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
 		48D0D7032654471A00538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		48D0D6BE26543B5500538973 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48D0D6FD2654471A00538973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -163,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				48D0D6C126543B5500538973 /* DJATesting.framework */,
-				48D0D7002654471A00538973 /* DJATesting_tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,15 +193,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48D0D6FB2654471A00538973 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48D0D7042654471A00538973 /* DJATesting.h in Headers */,
-				48D0D7182654477D00538973 /* UIGestureRecognizer+Testing.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -260,24 +214,6 @@
 			productReference = 48D0D6C126543B5500538973 /* DJATesting.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		48D0D6FF2654471A00538973 /* DJATesting tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 48D0D7052654471A00538973 /* Build configuration list for PBXNativeTarget "DJATesting tvOS" */;
-			buildPhases = (
-				48D0D6FB2654471A00538973 /* Headers */,
-				48D0D6FC2654471A00538973 /* Sources */,
-				48D0D6FD2654471A00538973 /* Frameworks */,
-				48D0D6FE2654471A00538973 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "DJATesting tvOS";
-			productName = "DJATesting tvOS";
-			productReference = 48D0D7002654471A00538973 /* DJATesting_tvOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -289,9 +225,6 @@
 					48D0D6C026543B5500538973 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
-					};
-					48D0D6FF2654471A00538973 = {
-						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -309,20 +242,12 @@
 			projectRoot = "";
 			targets = (
 				48D0D6C026543B5500538973 /* DJATesting */,
-				48D0D6FF2654471A00538973 /* DJATesting tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		48D0D6BF26543B5500538973 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48D0D6FE2654471A00538973 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,39 +287,6 @@
 				48145D73265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */,
 				489AE700265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */,
 				48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48D0D6FC2654471A00538973 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48D0D7122654477600538973 /* UIView+Testing.swift in Sources */,
-				48D0D70F2654476400538973 /* UIImage+Testing.swift in Sources */,
-				489AE6FA265FD54F001FFB58 /* UIAction+Testing.swift in Sources */,
-				489423322680B22200855EE2 /* MockTabBarController.swift in Sources */,
-				48943DA826B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */,
-				48145D7D265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
-				485B456526EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */,
-				48D0D7152654477800538973 /* Decodable+Testing.swift in Sources */,
-				48A311A326676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
-				48943DDF26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */,
-				48145D6F265C0178002B351C /* MockTransitionCoordinator.swift in Sources */,
-				48145D6A265C00FE002B351C /* MockViewControllerTransitionCoordinatorContext.swift in Sources */,
-				48943DAE26B9719300299FB4 /* MockCollectionLayoutEnvironment.swift in Sources */,
-				48943DB126B9721300299FB4 /* MockCollectionLayoutContainer.swift in Sources */,
-				485B455F26E9446600CF1F91 /* MockSplitViewController.swift in Sources */,
-				48943DB426B974A400299FB4 /* UICollectionViewLayout+Testing.swift in Sources */,
-				4859EE9D2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */,
-				48D0D71B2654478100538973 /* UIGestureRecognizer+Testing.m in Sources */,
-				48D0D70C2654475F00538973 /* UIControl+Testing.swift in Sources */,
-				48943DAB26B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift in Sources */,
-				48145D84265C038D002B351C /* PresentationCapturingViewController.swift in Sources */,
-				48A311A826676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */,
-				481F44DB26566E5E00618F4A /* MockNavigationController.swift in Sources */,
-				48145D74265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */,
-				489AE701265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */,
-				48A311AF266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,60 +474,6 @@
 			};
 			name = Release;
 		};
-		48D0D7062654471A00538973 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "DJATesting tvOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.13.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.DJATesting-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		48D0D7072654471A00538973 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "DJATesting tvOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.13.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.DJATesting-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -653,15 +491,6 @@
 			buildConfigurations = (
 				48D0D6CA26543B5500538973 /* Debug */,
 				48D0D6CB26543B5500538973 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		48D0D7052654471A00538973 /* Build configuration list for PBXNativeTarget "DJATesting tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				48D0D7062654471A00538973 /* Debug */,
-				48D0D7072654471A00538973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
