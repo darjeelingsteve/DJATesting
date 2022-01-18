@@ -127,8 +127,7 @@
 		48D0D6E5265445A500538973 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				48D0D6E6265445A500538973 /* UIKit */,
-				48D0D6EC265445A500538973 /* Decodable+Testing.swift */,
+				48EA13812796B6BF0088B99C /* DJATesting */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -153,6 +152,15 @@
 				48D0D6EA265445A500538973 /* UIView+Testing.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		48EA13812796B6BF0088B99C /* DJATesting */ = {
+			isa = PBXGroup;
+			children = (
+				48D0D6E6265445A500538973 /* UIKit */,
+				48D0D6EC265445A500538973 /* Decodable+Testing.swift */,
+			);
+			path = DJATesting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
