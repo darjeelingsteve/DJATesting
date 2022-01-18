@@ -13,6 +13,7 @@
 		48145D7C265C02B4002B351C /* MockPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D7B265C02B4002B351C /* MockPresentationViewController.swift */; };
 		48145D83265C038D002B351C /* PresentationCapturingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48145D82265C038D002B351C /* PresentationCapturingViewController.swift */; };
 		481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F44D926566E5E00618F4A /* MockNavigationController.swift */; };
+		4826BE7A2796FBAB00CF8BFF /* UIContextualAction+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4826BE792796FBAB00CF8BFF /* UIContextualAction+Testing.swift */; };
 		4859EE9C2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */; };
 		485B455E26E9446600CF1F91 /* MockSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B455D26E9446600CF1F91 /* MockSplitViewController.swift */; };
 		485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */; };
@@ -44,6 +45,7 @@
 		48145D7B265C02B4002B351C /* MockPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresentationViewController.swift; sourceTree = "<group>"; };
 		48145D82265C038D002B351C /* PresentationCapturingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCapturingViewController.swift; sourceTree = "<group>"; };
 		481F44D926566E5E00618F4A /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		4826BE792796FBAB00CF8BFF /* UIContextualAction+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContextualAction+Testing.swift"; sourceTree = "<group>"; };
 		4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Testing.swift"; sourceTree = "<group>"; };
 		485B455D26E9446600CF1F91 /* MockSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSplitViewController.swift; sourceTree = "<group>"; };
 		485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKeyCommand+Testing.swift"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */,
 				48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */,
 				48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */,
+				4826BE792796FBAB00CF8BFF /* UIContextualAction+Testing.swift */,
 				48D0D6E7265445A500538973 /* UIControl+Testing.swift */,
 				48D0D6E9265445A500538973 /* UIImage+Testing.swift */,
 				485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */,
@@ -282,6 +285,7 @@
 				48145D83265C038D002B351C /* PresentationCapturingViewController.swift in Sources */,
 				48A311A726676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */,
 				481F44DA26566E5E00618F4A /* MockNavigationController.swift in Sources */,
+				4826BE7A2796FBAB00CF8BFF /* UIContextualAction+Testing.swift in Sources */,
 				48145D73265C0225002B351C /* MockTransitionCoordinatingViewController.swift in Sources */,
 				489AE700265FD601001FFB58 /* UIAlertAction+Testing.swift in Sources */,
 				48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */,
