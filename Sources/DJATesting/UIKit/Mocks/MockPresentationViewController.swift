@@ -58,6 +58,10 @@ public class MockPresentationViewController<T: UIViewController>: UIViewControll
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     
+    /// A `Boolean` value indicating whether a message to
+    /// `dismissViewController:animated:completion:` has been received.
+    private(set) public var receivedDismissViewControllerMessage = false
+    
     /// The `animated` flag received by the most recent call to
     /// `dismissViewController:animated:completion:`.
     private(set) public var receivedDismissalAnimatedFlag: Bool?
@@ -67,6 +71,7 @@ public class MockPresentationViewController<T: UIViewController>: UIViewControll
     private(set) public var receivedDismissalCompletionClosure: (() -> Void)?
     
     public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        receivedDismissViewControllerMessage = true
         receivedDismissalAnimatedFlag = flag
         receivedDismissalCompletionClosure = completion
         super.dismiss(animated: flag, completion: completion)
