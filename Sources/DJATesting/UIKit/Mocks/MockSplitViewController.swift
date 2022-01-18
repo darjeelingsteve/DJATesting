@@ -62,6 +62,20 @@ public class MockSplitViewController: UISplitViewController {
         super.show(vc, sender: sender)
     }
     
+    /// The view controller received by the most recent call to
+    /// `-showDetailViewController:sender:`.
+    private(set) public var receivedShowDetailViewController: UIViewController?
+    
+    /// The sender received by the most recent call to
+    /// `-showDetailViewController:sender:`.
+    private(set) public var receivedShowDetailViewControllerSender: Any?
+    
+    public override func showDetailViewController(_ vc: UIViewController, sender: Any?) {
+        receivedShowDetailViewController = vc
+        receivedShowDetailViewControllerSender = sender
+        super.showDetailViewController(vc, sender: sender)
+    }
+    
     /// The `column` value received by the most recent call to `hideColumn:`.
     private(set) public var receivedHiddenColumn: UISplitViewController.Column?
     
