@@ -27,7 +27,7 @@ public class MockNavigationController: UINavigationController {
     
     /// The view controller received by the most recent call to
     /// `-pushViewController:animated:`.
-    private(set) public var receivedPushedViewController: UIViewController?
+    private(set) public var pushedViewController: UIViewController?
     
     /// The `animated` flag received by the most recent call to
     /// `pushViewController:animated:`.
@@ -35,7 +35,7 @@ public class MockNavigationController: UINavigationController {
     
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         super.pushViewController(viewController, animated: animated)
-        receivedPushedViewController = viewController
+        pushedViewController = viewController
         receivedPushViewControllerAnimatedFlag = animated
     }
     
@@ -83,14 +83,14 @@ public class MockNavigationController: UINavigationController {
     
     /// The view controller received by the most recent call to
     /// `-popToViewController:animated:`.
-    private(set) public var receivedPopToViewController: UIViewController?
+    private(set) public var poppedToViewController: UIViewController?
     
     /// The `animated` flag received by the most recent call to
     /// `popToViewController:animated:`.
     private(set) public var receivedPopToViewControllerAnimatedFlag: Bool?
     
     public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
-        receivedPopToViewController = viewController
+        poppedToViewController = viewController
         receivedPopToViewControllerAnimatedFlag = animated
         return super.popToViewController(viewController, animated: animated)
     }
