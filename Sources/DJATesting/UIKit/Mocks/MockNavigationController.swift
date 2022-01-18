@@ -39,6 +39,20 @@ public class MockNavigationController: UINavigationController {
         receivedPushViewControllerAnimatedFlag = animated
     }
     
+    /// The view controller received by the most recent call to
+    /// `-showViewController:sender:`.
+    private(set) public var receivedShowViewController: UIViewController?
+    
+    /// The sender received by the most recent call to
+    /// `-showViewController:sender:`.
+    private(set) public var receivedShowViewControllerSender: Any?
+    
+    public override func show(_ vc: UIViewController, sender: Any?) {
+        receivedShowViewController = vc
+        receivedShowViewControllerSender = sender
+        super.show(vc, sender: sender)
+    }
+    
     /// A `Boolean` value indicating whether a message to
     /// `popViewControllerAnimated:` has been received.
     private(set) public var receivedPopViewControllerMessage = false
