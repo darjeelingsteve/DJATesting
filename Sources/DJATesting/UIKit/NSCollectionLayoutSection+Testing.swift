@@ -15,4 +15,17 @@ public extension NSCollectionLayoutSection {
     var layoutGroup: NSCollectionLayoutGroup {
         value(forKey: "group") as! NSCollectionLayoutGroup
     }
+    
+#if os(iOS)
+    /// Accesses the receiver's leading swipe actions configurations.
+    /// - Parameter indexPath: The index path of the item whose leading swipe
+    /// actions configuration we wish to access.
+    /// - Returns: The leading swipe actions configuration for the given index
+    /// path, if any.
+    func leadingSwipeActionsConfiguration(atIndexPath indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // Using key from https://developer.limneos.net/?ios=14.4&framework=UIKitCore.framework&header=NSCollectionLayoutSection.h
+        let swipeActionsConfiguration = perform(NSSelectorFromString("_leadingSwipeActionsConfigurationForIndexPath:"), with: indexPath)
+        return swipeActionsConfiguration?.takeUnretainedValue() as? UISwipeActionsConfiguration
+    }
+#endif
 }
