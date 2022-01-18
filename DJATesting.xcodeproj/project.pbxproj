@@ -29,7 +29,6 @@
 		48A311A726676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
 		48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
 		48BDDB672796AFC2004320FF /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BDDB662796AFC2004320FF /* DJATesting.h */; };
-		48D0D6C626543B5500538973 /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D0D6C426543B5500538973 /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
 		48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
 		48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E9265445A500538973 /* UIImage+Testing.swift */; };
@@ -62,16 +61,12 @@
 		48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationFeedbackGenerator.swift; sourceTree = "<group>"; };
 		48BDDB662796AFC2004320FF /* DJATesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
 		48D0D6C126543B5500538973 /* DJATesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48D0D6C426543B5500538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
-		48D0D6C526543B5500538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D0D6E7265445A500538973 /* UIControl+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Testing.m"; sourceTree = "<group>"; };
 		48D0D6E9265445A500538973 /* UIImage+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6EA265445A500538973 /* UIView+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Testing.swift"; sourceTree = "<group>"; };
 		48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Testing.h"; sourceTree = "<group>"; };
 		48D0D6EC265445A500538973 /* Decodable+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Testing.swift"; sourceTree = "<group>"; };
-		48D0D7022654471A00538973 /* DJATesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
-		48D0D7032654471A00538973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +112,6 @@
 			children = (
 				48D0D6E5265445A500538973 /* Sources */,
 				48BDDB662796AFC2004320FF /* DJATesting.h */,
-				48D0D6C326543B5500538973 /* DJATesting iOS */,
-				48D0D7012654471A00538973 /* DJATesting tvOS */,
 				48D0D6C226543B5500538973 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,15 +122,6 @@
 				48D0D6C126543B5500538973 /* DJATesting.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		48D0D6C326543B5500538973 /* DJATesting iOS */ = {
-			isa = PBXGroup;
-			children = (
-				48D0D6C426543B5500538973 /* DJATesting.h */,
-				48D0D6C526543B5500538973 /* Info.plist */,
-			);
-			path = "DJATesting iOS";
 			sourceTree = "<group>";
 		};
 		48D0D6E5265445A500538973 /* Sources */ = {
@@ -171,15 +155,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		48D0D7012654471A00538973 /* DJATesting tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				48D0D7022654471A00538973 /* DJATesting.h */,
-				48D0D7032654471A00538973 /* Info.plist */,
-			);
-			path = "DJATesting tvOS";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -187,7 +162,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D0D6C626543B5500538973 /* DJATesting.h in Headers */,
 				48D0D6F1265445A500538973 /* UIGestureRecognizer+Testing.h in Headers */,
 				48BDDB672796AFC2004320FF /* DJATesting.h in Headers */,
 			);
