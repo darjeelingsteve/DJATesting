@@ -14,10 +14,10 @@ public class MockNavigationController: UINavigationController {
         receivedViewControllers = viewControllers
     }
     
-    private(set) public var pushedViewController: UIViewController?
+    private(set) public var receivedPushedViewController: UIViewController?
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         super.pushViewController(viewController, animated: animated)
-        pushedViewController = viewController
+        receivedPushedViewController = viewController
     }
     
     private(set) public var receivedPopViewControllerMessage = false
