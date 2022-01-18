@@ -145,8 +145,6 @@
 				48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */,
 				48943DB226B974A400299FB4 /* UICollectionViewLayout+Testing.swift */,
 				48D0D6E7265445A500538973 /* UIControl+Testing.swift */,
-				48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */,
-				48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */,
 				48D0D6E9265445A500538973 /* UIImage+Testing.swift */,
 				485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */,
 				48D0D6EA265445A500538973 /* UIView+Testing.swift */,
@@ -157,10 +155,28 @@
 		48EA13812796B6BF0088B99C /* DJATesting */ = {
 			isa = PBXGroup;
 			children = (
+				48EA13822796B7E90088B99C /* ObjC */,
 				48D0D6E6265445A500538973 /* UIKit */,
 				48D0D6EC265445A500538973 /* Decodable+Testing.swift */,
 			);
 			path = DJATesting;
+			sourceTree = "<group>";
+		};
+		48EA13822796B7E90088B99C /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				48EA13832796B7F90088B99C /* UIKit */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
+		48EA13832796B7F90088B99C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				48D0D6EB265445A500538973 /* UIGestureRecognizer+Testing.h */,
+				48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
