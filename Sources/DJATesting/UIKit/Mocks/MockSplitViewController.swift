@@ -9,10 +9,10 @@
 
 import UIKit
 
-@available(iOS 14.0, *)
-@available(tvOS 14.0, *)
 /// A mock split view controller, used to capture the messages and parameters
 /// sent to it.
+@available(iOS 14.0, *)
+@available(tvOS 14.0, *)
 public class MockSplitViewController: UISplitViewController {
     
     /// The view controller received by the most recent call to
