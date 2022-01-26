@@ -1,0 +1,13 @@
+@Tutorials(name: "Testing with DJATesting") {
+    @Intro(title: "Writing Unit Tests with DJATesting") {
+        Learn how to take advantage of DJATesting to supercharge your unit tests.
+    }
+    
+    @Chapter(name: "Test Data") {
+        Good tests start with good test data.
+        
+        @Image(source: "Braces.png", alt: "Curly braces containing an ellipsis")
+        
+        @TutorialReference(tutorial: "doc:Creating-and-Using-JSON-Test-Data")
+    }
+}
