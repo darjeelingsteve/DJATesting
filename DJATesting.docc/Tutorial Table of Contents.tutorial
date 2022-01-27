@@ -10,4 +10,12 @@
         
         @TutorialReference(tutorial: "doc:Creating-and-Using-JSON-Test-Data")
     }
+    
+    @Chapter(name: "Views and View Controllers") {
+        DJATesting makes writing unit tests for your views and view controllers a breeze. Find out more in this chapter.
+        
+        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+        
+        @TutorialReference(tutorial: "doc:Testing-Custom-Views")
+    }
 }
