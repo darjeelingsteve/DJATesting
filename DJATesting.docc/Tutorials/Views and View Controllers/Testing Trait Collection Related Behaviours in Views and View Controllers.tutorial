@@ -1,0 +1,63 @@
+@Tutorial(time: 15) {
+    @Intro(title: "Testing Trait Collection Related Behaviours in Views and View Controllers") {
+        Certain view or view controller behaviours are dependent upon the trait environment in which they are contained. See how DJATesting allows these behaviours to be controlled for and tested.
+        
+        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+    }
+    
+    @Section(title: "Testing Trait-Influenced View Behaviour") {
+        @ContentAndMedia {
+            Certain aspects of view behaviour are influenced by the trait environment, such as how the view is laid out. In this section, we will see how to control the trait environment of a view using ``DJATesting/TraitCollectionOverridingViewController`` in order to run our tests in a consistent display-scale environment.
+        }
+        
+        @Steps {
+            @Step {
+                Let's start by creating a custom view. `BorderedTextView` is simply a view with a child label subview, inset from its edges in order to create a border. Here we have the view, with its `label` property defined.
+                
+                @Code(name: "BorderedTextView.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-1.swift)
+            }
+            
+            @Step {
+                Next, we add an initialiser to add `label` as a subview, and pin it to our layout margins.
+                
+                @Code(name: "BorderedTextView.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-2.swift)
+            }
+            
+            @Step {
+                Finally we add a `text` property so that our `label`'s text can be set without exposing the label itself.
+                
+                Now that we have completed our view, we are ready to start testing.
+                
+                @Code(name: "BorderedTextView.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-3.swift)
+            }
+            
+            @Step {
+                We create a new test case called `BorderedTextViewTests`, adding a `borderedTextView` property to hold the view being tested. Notice that we also add a private extension to access the view's label using the technique described in <doc:Testing-Custom-Views>.
+                
+                @Code(name: "BorderedTextViewTests.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-4.swift)
+            }
+            
+            @Step {
+                Next we add the functions that we will need to create the view being tested and lay it out.
+                
+                @Code(name: "BorderedTextViewTests.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-5.swift)
+            }
+            
+            @Step {
+                Now we add a test to assert the correct layout of the label within the view.
+                
+                However, there is a problem here. On super-retina 3× devices, the label will be laid out neatly along pixel boundaries which do not map to round floating point numbers. As such, our assertions will fail. In order to remedy this, we need to control the display scale at which the tests are run in order that they be able to pass on simulators for devices with 3× screen scales.
+                
+                @Code(name: "BorderedTextViewTests.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-6.swift)
+            }
+            
+            @Step {
+                To control the screen scale, we use an instance of ``DJATesting/TraitCollectionOverridingViewController``, initialised with our view alongside an instance of `UITraitCollection` with the display scale set to `2.0`. In this environment, the layout computes frames with evenly rounded properties, allowing our test to pass on any simulator.
+                
+                In this example we used ``DJATesting/TraitCollectionOverridingViewController`` to control the display scale used by the view. This same technique can be used to control any of the properties that are part of `UITraitCollection`.
+                
+                @Code(name: "BorderedTextViewTests.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-7.swift)
+            }
+        }
+    }
+}

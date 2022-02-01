@@ -17,5 +17,6 @@
         @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
         
         @TutorialReference(tutorial: "doc:Testing-Custom-Views")
+        @TutorialReference(tutorial: "doc:Testing-Trait-Collection-Related-Behaviours-in-Views-and-View-Controllers")
     }
 }
