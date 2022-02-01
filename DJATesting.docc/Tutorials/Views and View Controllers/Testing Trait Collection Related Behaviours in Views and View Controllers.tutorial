@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 25) {
     @Intro(title: "Testing Trait Collection Related Behaviours in Views and View Controllers") {
         Certain view or view controller behaviours are dependent upon the trait environment in which they are contained. See how DJATesting allows these behaviours to be controlled for and tested.
         
@@ -57,6 +57,46 @@
                 In this example we used ``DJATesting/TraitCollectionOverridingViewController`` to control the display scale used by the view. This same technique can be used to control any of the properties that are part of `UITraitCollection`.
                 
                 @Code(name: "BorderedTextViewTests.swift", file: Testing-Trait-Influenced-View-Behaviour-Step-7.swift)
+            }
+        }
+    }
+        
+    @Section(title: "Testing Trait-Influenced View Controller Behaviour") {
+        @ContentAndMedia {
+            View controllers can also change their behaviour based upon the trait environment. No we will explore how to test these behaviours using ``DJATesting/TraitCollectionOverridingViewController``.
+        }
+        
+        @Steps {
+            @Step {
+                We are going to create a view controller for displaying a `User`, as defined in the <doc:Creating-and-Using-JSON-Test-Data> tutorial. The view controller is initialised using the `User` that it will display.
+                
+                @Code(name: "UserViewController.swift", file: Testing-Trait-Influenced-View-Controller-Behaviour-Step-1.swift)
+            }
+            
+            @Step {
+                Now we add the trait-influenced behaviour to the view controller. When in a regular width environment, we want the view controller's `title` to be the user's first name. In other environments, we want it to be `nil`.
+                
+                With the behaviour complete, it's time to add the tests.
+                
+                @Code(name: "UserViewController.swift", file: Testing-Trait-Influenced-View-Controller-Behaviour-Step-2.swift)
+            }
+            
+            @Step {
+                We create a new test case called `UserViewControllerTests`, adding a `userViewController` property to hold the view controller being tested, along with a property to hold the ``DJATesting/TraitCollectionOverridingViewController`` used to control the horizontal size class in our tests.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-Trait-Influenced-View-Controller-Behaviour-Step-3.swift)
+            }
+            
+            @Step {
+                Next we add the functions that we will need to create the view controller being tested and to lay out its view. We load the test data using the technique from <doc:Creating-and-Using-JSON-Test-Data>.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-Trait-Influenced-View-Controller-Behaviour-Step-4.swift)
+            }
+            
+            @Step {
+                Finally we add tests to assert the correct value for the view controller's `title` in regular and compact width environments.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-Trait-Influenced-View-Controller-Behaviour-Step-5.swift)
             }
         }
     }
