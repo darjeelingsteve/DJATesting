@@ -21,7 +21,7 @@ final class UserViewTests: XCTestCase {
     }
     
     private func givenAUserView() {
-        let users = try! [User].from(fileName: "DummyUsers", inBundle: Bundle(for: UserListDataSourceTests.self))
+        let users = try! [User].from(fileName: "DummyUsers", inBundle: Bundle(for: UserViewTests.self))
         userView = UserView(user: users[0])
     }
 }
