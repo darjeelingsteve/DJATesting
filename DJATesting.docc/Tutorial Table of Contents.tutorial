@@ -14,7 +14,7 @@
     @Chapter(name: "Testing System-Provided Container View Controllers") {
         Most of the information presented to users in applications is made navigable using system-provided [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html). Testing your application's usage of these view controllers allows you to verify what information is shown to your users, when it is shown, and how.
         
-        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+        @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
         
         @TutorialReference(tutorial: "doc:Testing-UINavigationController")
     }
