@@ -2,7 +2,7 @@
     @Intro(title: "Testing UINavigationController") {
         `UINavigationController` is one of the most commonly used [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html) in iOS development. DJATesting allows you test write tests that capture the messages your app sends to its navigation controllers along with their parameters, allowing you to unit test the navigation flow you've built for your users.
         
-        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+        @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
     }
     
     @Section(title: "Build a View Controller Hierarchy with a Child Navigation Controller") {
