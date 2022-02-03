@@ -17,6 +17,7 @@
         @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
         
         @TutorialReference(tutorial: "doc:Testing-UINavigationController")
+        @TutorialReference(tutorial: "doc:Testing-UISplitViewController")
     }
     
     @Chapter(name: "Testing Custom Views and View Controllers") {

@@ -1,0 +1,79 @@
+@Tutorial(time: 10) {
+    @Intro(title: "Testing UISplitViewController") {
+        `UISplitViewController` received a major update in iOS 14, making support for adaptive layouts trivial with its [setViewController:forColumn:](https://developer.apple.com/documentation/uikit/uisplitviewcontroller/3580911-setviewcontroller) API. DJATesting simplifies testing of `UISplitViewController`, making it easy to validate your split view controller interactions.
+        
+        @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
+    }
+    
+    @Section(title: "Build a View Controller Hierarchy with a Child Split View Controller") {
+        @ContentAndMedia {
+            In order to test our split view controller usage, we first need to build a view controller hierarchy that contains a spli view controller. We will create `MainSceneViewController`, a container view controller that will contain a child split view controller, whose column view controllers will be controlled by the parent `MainSceneViewController`.
+        }
+        
+        @Steps {
+            @Step {
+                First we create `MainSceneViewController`. In its initialiser, we take the split view controller that will be managed as a child in the `MainSceneViewController`. The split view controller is a parameter so that it can be replaced with a mock in the unit tests. By default, the split view controller presents a double column split view.
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UISplitViewController-Step-1.swift)
+            }
+            
+            @Step {
+                Next we add the split view controller as a child when the view loads.
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UISplitViewController-Step-2.swift)
+            }
+            
+            @Step {
+                Now we set the view controllers that will be displayed in the split view controllers columns. When expanded, the split view will display a `MenuViewController` in its `.primary` column, and a `HomeViewController` in its `.secondary` column. When the split view is in a compact width environment, it will show its `.compact` column, which is configured to display a `UITabBarController`, also displaying home and menu view controllers. 
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UISplitViewController-Step-3.swift)
+            }
+            
+            @Step {
+                Finally, we set our `MainSceneViewController` to be the delegate of the home view controller that is displayed in the split view secondary column. When this home view controller requests full screen display from its delegate, we hide our split view's `.primary` column.
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UISplitViewController-Step-4.swift)
+            }
+        }
+    }
+        
+    @Section(title: "Testing the Split View Controller Interactions") {
+        @ContentAndMedia {
+            Now we will see how easy it is to test our split view controller usage with DJATesting.
+        }
+        
+        @Steps {
+            @Step {
+                We begin by creating a test case for the `MainSceneViewController` we created earlier.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UISplitViewController-Step-5.swift)
+            }
+            
+            @Step {
+                We add a property for the view controller being tested, as well as create an instance of ``DJATesting/MockSplitViewController``. This is a subclass of `UISplitViewController` that allows us to inspect the messages and parameters sent to the split view controller.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UISplitViewController-Step-6.swift)
+            }
+            
+            @Step {
+                Next we add the functions that we will need to start testing our view controller. Note the mock split view controller being injected in the `MainSceneViewController` initialiser.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UISplitViewController-Step-7.swift)
+            }
+            
+            @Step {
+                Now we can add tests to verify that `MainSceneViewController` shows the correct view controllers in its split view when the split view is exapnded or collapsed. We check the view controllers set for each column using properties available to us on ``DJATesting/MockSplitViewController``.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UISplitViewController-Step-8.swift)
+            }
+            
+            @Step {
+                Finally, we add another test, this time verifying the behaviour when the home view controller in the secondary column requests full screen display. Using the ``DJATesting/MockSplitViewController/receivedHiddenColumn`` property of ``DJATesting/MockSplitViewController`` we can access the column that was hidden and check that it is the correct one.
+                
+                `MockSplitViewController` allows for all `UISplitViewController` behaviour to be verified in unit tests. Review the ``DJATesting/MockSplitViewController`` documentation to see how this can be achieved. 
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UISplitViewController-Step-9.swift)
+            }
+        }
+    }
+}
