@@ -33,6 +33,10 @@ public class MockCollectionLayoutContainer: NSObject, NSCollectionLayoutContaine
         self.contentInsets = contentInsets
         self.effectiveContentInsets = effectiveContentInsets
     }
+    
+    public convenience override init() {
+        self.init(contentSize: .zero, effectiveContentSize: .zero, contentInsets: .zero, effectiveContentInsets: .zero)
+    }
 }
 
 #endif
