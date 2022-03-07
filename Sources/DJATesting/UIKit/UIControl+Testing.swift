@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 18/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UIControl {
@@ -15,3 +17,5 @@ public extension UIControl {
         sendActions(for: .primaryActionTriggered)
     }
 }
+
+#endif

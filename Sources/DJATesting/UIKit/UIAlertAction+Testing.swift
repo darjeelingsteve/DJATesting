@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 27/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UIAlertAction {
@@ -19,3 +21,5 @@ public extension UIAlertAction {
         actionHandler(self)
     }
 }
+
+#endif

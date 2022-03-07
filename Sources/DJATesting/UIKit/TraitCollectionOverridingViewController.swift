@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 09/08/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A view controller that allows the trait colleciton to be overriden for a
@@ -61,3 +63,5 @@ private final class ViewHostingViewController: UIViewController {
         view = hostedView
     }
 }
+
+#endif

@@ -7,7 +7,8 @@ let package = Package(
     name: "DJATesting",
     platforms: [
         .iOS(.v10),
-        .tvOS(.v10)
+        .tvOS(.v10),
+        .watchOS(.v2)
     ],
     products: [
         .library(name: "DJATesting", type: .dynamic, targets: ["DJATesting"])

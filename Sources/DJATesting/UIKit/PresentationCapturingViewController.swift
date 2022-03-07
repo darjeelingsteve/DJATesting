@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 24/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A view controller that captures any presented view controllers of a
@@ -54,3 +56,5 @@ public class PresentationCapturingViewController<ViewControllerType: UIViewContr
         super.dismiss(animated: flag, completion: completion)
     }
 }
+
+#endif

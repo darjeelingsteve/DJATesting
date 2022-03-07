@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 18/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UIView {
@@ -120,3 +122,5 @@ public extension Array where Element: UIView {
         }
     }
 }
+
+#endif

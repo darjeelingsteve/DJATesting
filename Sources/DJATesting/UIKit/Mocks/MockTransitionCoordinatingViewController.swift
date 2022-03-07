@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 24/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A view controller that returns a `MockTransitionCoordinator` for its
@@ -19,3 +21,5 @@ public class MockTransitionCoordinatingViewController: UIViewController {
         return mockTransitionCoordinator
     }
 }
+
+#endif

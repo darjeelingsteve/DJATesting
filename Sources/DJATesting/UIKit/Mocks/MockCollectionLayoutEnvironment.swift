@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 03/08/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// Allows for the creation of a collection layout environment, which is needed
@@ -24,3 +26,5 @@ public class MockCollectionLayoutEnvironment: NSObject, NSCollectionLayoutEnviro
         self.traitCollection = traitCollection
     }
 }
+
+#endif
