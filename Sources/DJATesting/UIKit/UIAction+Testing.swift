@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 27/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 @available(iOS 13.0, tvOS 13.0, *)
@@ -20,3 +22,5 @@ public extension UIAction {
         actionHandler(self)
     }
 }
+
+#endif

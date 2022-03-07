@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 24/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A view controller that can be configured to return a view controller from
@@ -77,3 +79,5 @@ public class MockPresentationViewController<T: UIViewController>: UIViewControll
         super.dismiss(animated: flag, completion: completion)
     }
 }
+
+#endif

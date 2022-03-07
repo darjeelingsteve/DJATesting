@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 08/09/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 @available(iOS 14.0, *)
@@ -151,3 +153,5 @@ public class MockSplitViewController: UISplitViewController {
         return mockTransitionCoordinator
     }
 }
+
+#endif

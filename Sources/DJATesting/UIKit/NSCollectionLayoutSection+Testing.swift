@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 03/08/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 @available(iOS 13.0, *)
@@ -40,3 +42,5 @@ public extension NSCollectionLayoutSection {
     }
 #endif
 }
+
+#endif

@@ -9,6 +9,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+#if !TARGET_OS_WATCH
+
 @implementation UIGestureRecognizer (Testing)
 
 - (void)dja_simulateGestureRecognition {
@@ -31,3 +33,5 @@
 }
 
 @end
+
+#endif

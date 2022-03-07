@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 24/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A mock for injection in the place of a system provided transition animator.
@@ -78,3 +80,5 @@ public class MockTransitionCoordinator: NSObject, UIViewControllerTransitionCoor
         return nil
     }
 }
+
+#endif

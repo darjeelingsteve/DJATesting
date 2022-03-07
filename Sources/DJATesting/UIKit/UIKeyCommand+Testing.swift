@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 09/09/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UIKeyCommand {
@@ -21,3 +23,5 @@ public extension UIKeyCommand {
         }
     }
 }
+
+#endif

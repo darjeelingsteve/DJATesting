@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 03/08/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UICollectionViewLayout {
@@ -24,3 +26,5 @@ public extension UICollectionViewLayout {
         value(forKey: "decorationViewClassDict") as! [String: AnyClass]
     }
 }
+
+#endif

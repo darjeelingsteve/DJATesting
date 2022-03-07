@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 24/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A mock transition context that can be used when mocking a transition
@@ -42,3 +44,5 @@ public class MockViewControllerTransitionCoordinatorContext: NSObject, UIViewCon
         return nil
     }
 }
+
+#endif

@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 21/06/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A mock tab bar controller, used to capture the messages and parameters sent
@@ -112,3 +114,5 @@ public class MockTabBarController: UITabBarController {
         return mockTransitionCoordinator
     }
 }
+
+#endif

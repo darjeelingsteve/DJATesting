@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 18/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UIImage {
@@ -21,3 +23,5 @@ public extension UIImage {
         }
     }
 }
+
+#endif

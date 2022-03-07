@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 03/08/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// Allows a layout container to be constructed and populated for passing to an
@@ -32,3 +34,5 @@ public class MockCollectionLayoutContainer: NSObject, NSCollectionLayoutContaine
         self.effectiveContentInsets = effectiveContentInsets
     }
 }
+
+#endif

@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 20/05/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 /// A mock navigation controller, used to capture the messages and parameters
@@ -168,3 +170,5 @@ public class MockNavigationController: UINavigationController {
         return mockTransitionCoordinator
     }
 }
+
+#endif

@@ -5,6 +5,8 @@
 //  Created by Stephen Anthony on 25/06/2021.
 //
 
+#if !os(watchOS)
+
 import UIKit
 
 public extension UIBarButtonItem {
@@ -19,3 +21,5 @@ public extension UIBarButtonItem {
         }
     }
 }
+
+#endif
