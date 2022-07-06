@@ -43,4 +43,26 @@ public extension NSCollectionLayoutSection {
 #endif
 }
 
+#if os(iOS)
+@available(iOS 14.5, *)
+public extension NSCollectionLayoutSection {
+    private typealias ListSeparatorConfigurationProvider = @convention(block) (IndexPath, UIListSeparatorConfiguration) -> UIListSeparatorConfiguration
+
+    func listSeparatorConfigurationForItem(atIndexPath indexPath: IndexPath) -> UIListSeparatorConfiguration? {
+        // Using key from https://developer.limneos.net/?ios=14.4&framework=UIKitCore.framework&header=NSCollectionLayoutSection.h
+        guard let configuration = value(forKey: "_configuration") as? AnyObject else { return nil }
+
+        // Using keys from https://developer.limneos.net/?ios=15.2.1&framework=UIKitCore.framework&header=_UICollectionViewListLayoutSectionConfiguration.h
+        guard let block = configuration.value(forKey: "_itemSeparatorHandler") else { return nil }
+
+        // Using keys from https://developer.limneos.net/?ios=15.2.1&framework=UIKitCore.framework&header=_UICollectionViewListLayoutSectionConfiguration.h
+        guard let defaultSeparatorConfiguration = configuration.value(forKey: "_separatorConfiguration") as? UIListSeparatorConfiguration else { return nil }
+
+        let itemSeparatorHandlerBlockPointer = UnsafeRawPointer(Unmanaged<AnyObject>.passUnretained(block as AnyObject).toOpaque())
+        let itemSeparatorHandler = unsafeBitCast(itemSeparatorHandlerBlockPointer, to: ListSeparatorConfigurationProvider.self)
+        return itemSeparatorHandler(indexPath, defaultSeparatorConfiguration)
+    }
+}
+#endif
+
 #endif
