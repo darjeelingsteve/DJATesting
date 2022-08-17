@@ -15,6 +15,11 @@ import UIKit
 /// sent to it.
 public class MockSplitViewController: UISplitViewController {
     
+    /// A `Boolean` value indicating whether the receiver calls its superclass
+    /// implementations when it receives messages for overridden methods. The
+    /// default value is `true`.
+    public var callsSuper = true
+    
     /// The view controller received by the most recent call to
     /// `-setViewController:forColumn:` with a column value of
     /// `UISplitViewControllerColumnCompact`.
@@ -61,7 +66,9 @@ public class MockSplitViewController: UISplitViewController {
     public override func show(_ vc: UIViewController, sender: Any?) {
         receivedShowViewController = vc
         receivedShowViewControllerSender = sender
-        super.show(vc, sender: sender)
+        if callsSuper {
+            super.show(vc, sender: sender)
+        }
     }
     
     /// The view controller received by the most recent call to
@@ -75,7 +82,9 @@ public class MockSplitViewController: UISplitViewController {
     public override func showDetailViewController(_ vc: UIViewController, sender: Any?) {
         receivedShowDetailViewController = vc
         receivedShowDetailViewControllerSender = sender
-        super.showDetailViewController(vc, sender: sender)
+        if callsSuper {
+            super.showDetailViewController(vc, sender: sender)
+        }
     }
     
     /// The `column` value received by the most recent call to `hideColumn:`.
@@ -83,7 +92,9 @@ public class MockSplitViewController: UISplitViewController {
     
     override public func hide(_ column: UISplitViewController.Column) {
         receivedHiddenColumn = column
-        super.hide(column)
+        if callsSuper {
+            super.hide(column)
+        }
     }
     
     /// The `column` value received by the most recent call to `showColumn:`.
@@ -91,7 +102,9 @@ public class MockSplitViewController: UISplitViewController {
     
     public override func show(_ column: UISplitViewController.Column) {
         receivedShownColumn = column
-        super.show(column)
+        if callsSuper {
+            super.show(column)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -115,7 +128,9 @@ public class MockSplitViewController: UISplitViewController {
         receivedViewControllerForPresentation = viewControllerToPresent
         receivedPresentViewControllerAnimatedFlag = flag
         receivedPresentationCompletionClosure = completion
-        super.present(viewControllerToPresent, animated: flag, completion: completion)
+        if callsSuper {
+            super.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -134,7 +149,9 @@ public class MockSplitViewController: UISplitViewController {
         receivedDismissViewControllerMessage = true
         receivedDismissalAnimatedFlag = flag
         receivedDismissalCompletionClosure = completion
-        super.dismiss(animated: flag, completion: completion)
+        if callsSuper {
+            super.dismiss(animated: flag, completion: completion)
+        }
     }
     
     /// The view controller that the receiver will return from
