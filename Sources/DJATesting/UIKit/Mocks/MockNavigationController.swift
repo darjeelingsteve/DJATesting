@@ -13,6 +13,11 @@ import UIKit
 /// sent to it.
 public class MockNavigationController: UINavigationController {
     
+    /// A `Boolean` value indicating whether the receiver calls its superclass
+    /// implementations when it receives messages for overridden methods. The
+    /// default value is `true`.
+    public var callsSuper = true
+    
     /// The view controller array received by the most recent call to
     /// `-setViewControllers:animated:`.
     private(set) public var receivedViewControllers: [UIViewController]?
@@ -22,7 +27,9 @@ public class MockNavigationController: UINavigationController {
     private(set) public var receivedSetViewControllersAnimatedFlag: Bool?
     
     public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-        super.setViewControllers(viewControllers, animated: animated)
+        if callsSuper {
+            super.setViewControllers(viewControllers, animated: animated)
+        }
         receivedViewControllers = viewControllers
         receivedSetViewControllersAnimatedFlag = animated
     }
@@ -36,7 +43,9 @@ public class MockNavigationController: UINavigationController {
     private(set) public var receivedPushViewControllerAnimatedFlag: Bool?
     
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        super.pushViewController(viewController, animated: animated)
+        if callsSuper {
+            super.pushViewController(viewController, animated: animated)
+        }
         pushedViewController = viewController
         receivedPushViewControllerAnimatedFlag = animated
     }
@@ -52,7 +61,9 @@ public class MockNavigationController: UINavigationController {
     public override func show(_ vc: UIViewController, sender: Any?) {
         receivedShowViewController = vc
         receivedShowViewControllerSender = sender
-        super.show(vc, sender: sender)
+        if callsSuper {
+            super.show(vc, sender: sender)
+        }
     }
     
     /// The view controller received by the most recent call to
@@ -66,7 +77,9 @@ public class MockNavigationController: UINavigationController {
     public override func showDetailViewController(_ vc: UIViewController, sender: Any?) {
         receivedShowDetailViewController = vc
         receivedShowDetailViewControllerSender = sender
-        super.showDetailViewController(vc, sender: sender)
+        if callsSuper {
+            super.showDetailViewController(vc, sender: sender)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -132,7 +145,9 @@ public class MockNavigationController: UINavigationController {
         receivedViewControllerForPresentation = viewControllerToPresent
         receivedPresentViewControllerAnimatedFlag = flag
         receivedPresentationCompletionClosure = completion
-        super.present(viewControllerToPresent, animated: flag, completion: completion)
+        if callsSuper {
+            super.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -151,7 +166,9 @@ public class MockNavigationController: UINavigationController {
         receivedDismissViewControllerMessage = true
         receivedDismissalAnimatedFlag = flag
         receivedDismissalCompletionClosure = completion
-        super.dismiss(animated: flag, completion: completion)
+        if callsSuper {
+            super.dismiss(animated: flag, completion: completion)
+        }
     }
     
     /// The view controller that the receiver will return from
