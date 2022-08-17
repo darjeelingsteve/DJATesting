@@ -14,6 +14,11 @@ import UIKit
 /// present.
 public class MockPresentationViewController<T: UIViewController>: UIViewController {
     
+    /// A `Boolean` value indicating whether the receiver calls its superclass
+    /// implementations when it receives messages for overridden methods. The
+    /// default value is `true`.
+    public var callsSuper = true
+    
     /// The view controller that the receiver will return from
     /// `presentedViewController`.
     public let overriddenPresentedViewController: T
@@ -57,7 +62,9 @@ public class MockPresentationViewController<T: UIViewController>: UIViewControll
         receivedViewControllerForPresentation = viewControllerToPresent
         receivedPresentViewControllerAnimatedFlag = flag
         receivedPresentationCompletionClosure = completion
-        super.present(viewControllerToPresent, animated: flag, completion: completion)
+        if callsSuper {
+            super.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -76,7 +83,9 @@ public class MockPresentationViewController<T: UIViewController>: UIViewControll
         receivedDismissViewControllerMessage = true
         receivedDismissalAnimatedFlag = flag
         receivedDismissalCompletionClosure = completion
-        super.dismiss(animated: flag, completion: completion)
+        if callsSuper {
+            super.dismiss(animated: flag, completion: completion)
+        }
     }
 }
 
