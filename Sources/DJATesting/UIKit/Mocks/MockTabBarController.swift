@@ -13,6 +13,11 @@ import UIKit
 /// to it.
 public class MockTabBarController: UITabBarController {
     
+    /// A `Boolean` value indicating whether the receiver calls its superclass
+    /// implementations when it receives messages for overridden methods. The
+    /// default value is `true`.
+    public var callsSuper = true
+    
     /// The view controller array received by the most recent call to
     /// `-setViewControllers:animated:`.
     private(set) public var receivedViewControllers: [UIViewController]?
@@ -24,7 +29,9 @@ public class MockTabBarController: UITabBarController {
     public override func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {
         receivedViewControllers = viewControllers
         receivedSetViewControllersAnimatedFlag = animated
-        super.setViewControllers(viewControllers, animated: animated)
+        if callsSuper {
+            super.setViewControllers(viewControllers, animated: animated)
+        }
     }
     
     /// The view controller received by the most recent call to
@@ -38,7 +45,9 @@ public class MockTabBarController: UITabBarController {
     public override func show(_ vc: UIViewController, sender: Any?) {
         receivedShowViewController = vc
         receivedShowViewControllerSender = sender
-        super.show(vc, sender: sender)
+        if callsSuper {
+            super.show(vc, sender: sender)
+        }
     }
     
     /// The view controller received by the most recent call to
@@ -52,7 +61,9 @@ public class MockTabBarController: UITabBarController {
     public override func showDetailViewController(_ vc: UIViewController, sender: Any?) {
         receivedShowDetailViewController = vc
         receivedShowDetailViewControllerSender = sender
-        super.showDetailViewController(vc, sender: sender)
+        if callsSuper {
+            super.showDetailViewController(vc, sender: sender)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -76,7 +87,9 @@ public class MockTabBarController: UITabBarController {
         receivedViewControllerForPresentation = viewControllerToPresent
         receivedPresentViewControllerAnimatedFlag = flag
         receivedPresentationCompletionClosure = completion
-        super.present(viewControllerToPresent, animated: flag, completion: completion)
+        if callsSuper {
+            super.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
     }
     
     /// A `Boolean` value indicating whether a message to
@@ -95,7 +108,9 @@ public class MockTabBarController: UITabBarController {
         receivedDismissViewControllerMessage = true
         receivedDismissalAnimatedFlag = flag
         receivedDismissalCompletionClosure = completion
-        super.dismiss(animated: flag, completion: completion)
+        if callsSuper {
+            super.dismiss(animated: flag, completion: completion)
+        }
     }
     
     /// The view controller that the receiver will return from
@@ -103,7 +118,7 @@ public class MockTabBarController: UITabBarController {
     public var overriddenPresentedViewController: UIViewController?
     
     public override var presentedViewController: UIViewController? {
-        return overriddenPresentedViewController ?? super.presentedViewController
+        return overriddenPresentedViewController ?? (callsSuper ? super.presentedViewController : nil)
     }
     
     /// The mock transition coordinator returned by the receiver's
