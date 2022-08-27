@@ -18,10 +18,16 @@ public extension UICollectionViewCompositionalLayout {
     /// - Parameter index: The index of the section whose provider we wish to retrieve.
     /// - Returns: The section at the given index.
     func section(atIndex index: Int) -> NSCollectionLayoutSection? {
-        /// Create an instance of `NSCollectionLayoutEnvironment`, which is
-        /// declared as a class internally in UIKit, rather than just as a
-        /// protocol as it would appear publicly.
-        let layoutEnvironmentClass = NSClassFromString("NSCollectionLayoutEnvironment") as! NSObject.Type
+        let layoutEnvironmentClass: NSObject.Type
+        if #available(iOS 16, *) {
+            layoutEnvironmentClass = NSClassFromString("_UICollectionLayoutEnvironment") as! NSObject.Type
+        } else {
+            /// Create an instance of `NSCollectionLayoutEnvironment`, which is
+            /// declared as a class internally in UIKit, rather than just as a
+            /// protocol as it would appear publicly.
+            layoutEnvironmentClass = NSClassFromString("NSCollectionLayoutEnvironment") as! NSObject.Type
+            
+        }
         let layoutEnvironment = layoutEnvironmentClass.init() as! NSCollectionLayoutEnvironment
         
         /// Access the container that is generated internally by the layout and
