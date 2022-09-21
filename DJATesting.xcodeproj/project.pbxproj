@@ -17,6 +17,7 @@
 		4859EE9C2685F3090042805C /* UIBarButtonItem+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */; };
 		485B455E26E9446600CF1F91 /* MockSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B455D26E9446600CF1F91 /* MockSplitViewController.swift */; };
 		485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */; };
+		488ACA8328DB19BF007E7E9F /* NSObject+ForcedInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488ACA8228DB19BF007E7E9F /* NSObject+ForcedInit.swift */; };
 		489423312680B22200855EE2 /* MockTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489423302680B22200855EE2 /* MockTabBarController.swift */; };
 		48943DA726B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */; };
 		48943DAA26B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */; };
@@ -49,6 +50,7 @@
 		4859EE9B2685F3090042805C /* UIBarButtonItem+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Testing.swift"; sourceTree = "<group>"; };
 		485B455D26E9446600CF1F91 /* MockSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSplitViewController.swift; sourceTree = "<group>"; };
 		485B456326EA228E00CF1F91 /* UIKeyCommand+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKeyCommand+Testing.swift"; sourceTree = "<group>"; };
+		488ACA8228DB19BF007E7E9F /* NSObject+ForcedInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ForcedInit.swift"; sourceTree = "<group>"; };
 		489423302680B22200855EE2 /* MockTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTabBarController.swift; sourceTree = "<group>"; };
 		48943DA626B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+Testing.swift"; sourceTree = "<group>"; };
 		48943DA926B9715400299FB4 /* UICollectionViewCompositionalLayout+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCompositionalLayout+Testing.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				48EA13822796B7E90088B99C /* ObjC */,
 				48D0D6E6265445A500538973 /* UIKit */,
 				48D0D6EC265445A500538973 /* Decodable+Testing.swift */,
+				488ACA8228DB19BF007E7E9F /* NSObject+ForcedInit.swift */,
 			);
 			path = DJATesting;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				489423312680B22200855EE2 /* MockTabBarController.swift in Sources */,
 				48943DA726B970F800299FB4 /* NSCollectionLayoutSection+Testing.swift in Sources */,
 				48145D7C265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
+				488ACA8328DB19BF007E7E9F /* NSObject+ForcedInit.swift in Sources */,
 				485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */,
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
 				48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
