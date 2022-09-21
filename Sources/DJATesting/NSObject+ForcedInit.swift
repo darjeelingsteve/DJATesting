@@ -7,7 +7,7 @@
 
 import Foundation
 
-private extension NSObject {
+public extension NSObject {
     
     /// A workaround for classes whose `init` methods are marked as deprecated
     /// or are made inaccessible.
