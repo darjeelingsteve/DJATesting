@@ -6,9 +6,9 @@ import PackageDescription
 let package = Package(
     name: "DJATesting",
     platforms: [
-        .iOS(.v10),
-        .tvOS(.v10),
-        .watchOS(.v2)
+        .iOS(.v11),
+        .tvOS(.v11),
+        .watchOS(.v4)
     ],
     products: [
         .library(name: "DJATesting", type: .dynamic, targets: ["DJATesting"])
