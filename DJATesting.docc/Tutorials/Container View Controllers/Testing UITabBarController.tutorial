@@ -1,0 +1,119 @@
+@Tutorial(time: 10) {
+    @Intro(title: "Testing UITabBarController") {
+        `UITabBarController` is a common [container view controller](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html) used for organising an app's UI in compact size class environments. DJATesting allows for testing of tab bar controllers by providing a tab bar controller mock used to intercept the messages your app sends, including their parameters.
+        
+        @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
+    }
+    
+    @Section(title: "Build a View Controller Hierarchy with a Child Tab Bar Controller") {
+        @ContentAndMedia {
+            In order to test our tab bar controller usage, we first need to 
+            build a view controller hierarchy that contains a tab bar 
+            controller. We will create `MainSceneViewController`, a container 
+            view controller that will contain a child tab bar controller, whose 
+            child view controllers will be controlled by the parent 
+            `MainSceneViewController`.
+        }
+        
+        @Steps {
+            @Step {
+                First we create `MainSceneViewController`. In its initialiser, 
+                we take the tab bar controller that will be managed as a child 
+                in the `MainSceneViewController`. The tab bar controller is a 
+                parameter so that it can be replaced with a mock in the unit 
+                tests.
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UITabBarController-Step-1.swift)
+            }
+            
+            @Step {
+                Next we add the tab bar controller as a child when the view 
+                loads.
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UITabBarController-Step-2.swift)
+            }
+            
+            @Step {
+                Now we set the view controllers that will be displayed in the 
+                tab bar controller's tab bar. Initially, our 
+                `MainSceneViewController`'s child tab bar controller shows a 
+                single tab for the app's `SetupViewController`. 
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UITabBarController-Step-3.swift)
+            }
+            
+            @Step {
+                Finally, we set our `MainSceneViewController` to be the delegate 
+                of the setup view controller that is displayed in the child tab
+                bar controller. When this setup view controller indicates that 
+                the user has finished setting up the app, we reconfigure the 
+                child tab bar controller to show two tabs, one for a 
+                `HomeViewController`, and another for a `FeedViewController`.
+                
+                @Code(name: "MainSceneViewController.swift", file: Testing-UITabBarController-Step-4.swift)
+            }
+        }
+    }
+        
+    @Section(title: "Testing the Tab Bar Controller Interactions") {
+        @ContentAndMedia {
+            Now we will see how to test our tab bar controller usage with 
+            DJATesting.
+        }
+        
+        @Steps {
+            @Step {
+                We begin by creating a test case for the 
+                `MainSceneViewController` we created earlier.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UITabBarController-Step-5.swift)
+            }
+            
+            @Step {
+                We add a property for the view controller being tested, as well 
+                as create an instance of ``DJATesting/MockTabBarController``. 
+                This is a subclass of `UITabBarController` that allows us to 
+                inspect the messages and parameters sent to the tab bar 
+                controller.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UITabBarController-Step-6.swift)
+            }
+            
+            @Step {
+                Next we add the functions that we will need to start testing our 
+                view controller. Note the mock tab bar controller being injected 
+                in the `MainSceneViewController` initialiser.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UITabBarController-Step-7.swift)
+            }
+            
+            @Step {
+                Now we can add tests to verify that `MainSceneViewController` 
+                shows the correct view controllers in its tab bar controller 
+                when the view loads. We check the view controllers that are set
+                and verify that they are set without animation using properties 
+                available to us on ``DJATesting/MockTabBarController``.
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UITabBarController-Step-8.swift)
+            }
+            
+            @Step {
+                Finally, we add another test, this time verifying the behaviour 
+                when the setup view controller indicates that app setup has 
+                completed. Using the 
+                ``DJATesting/MockTabBarController/receivedViewControllers`` and
+                ``DJATesting/MockTabBarController/receivedSetViewControllersAnimatedFlag``
+                properties of ``DJATesting/MockTabBarController`` we can access 
+                the view controllers that were shown in the tab bar controller
+                and check that they were set with animation.
+                
+                `MockTabBarController` allows for all `UITabBarController` 
+                behaviour to be verified in unit tests. Review the 
+                ``DJATesting/MockTabBarController`` documentation to see how 
+                this can be achieved. 
+                
+                @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UITabBarController-Step-9.swift)
+            }
+        }
+    }
+}

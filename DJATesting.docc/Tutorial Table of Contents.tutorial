@@ -18,6 +18,7 @@
         
         @TutorialReference(tutorial: "doc:Testing-UINavigationController")
         @TutorialReference(tutorial: "doc:Testing-UISplitViewController")
+        @TutorialReference(tutorial: "doc:Testing-UITabBarController")
     }
     
     @Chapter(name: "Testing Custom Views and View Controllers") {
