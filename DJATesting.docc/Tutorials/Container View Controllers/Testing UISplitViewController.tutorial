@@ -7,7 +7,7 @@
     
     @Section(title: "Build a View Controller Hierarchy with a Child Split View Controller") {
         @ContentAndMedia {
-            In order to test our split view controller usage, we first need to build a view controller hierarchy that contains a spli view controller. We will create `MainSceneViewController`, a container view controller that will contain a child split view controller, whose column view controllers will be controlled by the parent `MainSceneViewController`.
+            In order to test our split view controller usage, we first need to build a view controller hierarchy that contains a split view controller. We will create `MainSceneViewController`, a container view controller that will contain a child split view controller, whose column view controllers will be controlled by the parent `MainSceneViewController`.
         }
         
         @Steps {
