@@ -62,7 +62,7 @@
             }
             
             @Step {
-                Now we can add tests to verify that `MainSceneViewController` shows the correct view controllers in its split view when the split view is exapnded or collapsed. We check the view controllers set for each column using properties available to us on ``DJATesting/MockSplitViewController``.
+                Now we can add tests to verify that `MainSceneViewController` shows the correct view controllers in its split view when the split view is expanded or collapsed. We check the view controllers set for each column using properties available to us on ``DJATesting/MockSplitViewController``.
                 
                 @Code(name: "MainSceneViewControllerTests.swift", file: Testing-UISplitViewController-Step-8.swift)
             }
