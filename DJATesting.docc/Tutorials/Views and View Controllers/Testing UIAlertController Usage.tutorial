@@ -1,0 +1,94 @@
+@Tutorial(time: 10) {
+    @Intro(title: "Testing UIAlertController Usage") {
+        Alert controllers provide a simple way to present messages with actionable options to your users. By contrast, unit testing them can be far from straightforward. Learn how DJATesting makes unit testing your alerts anything but alarming.
+        
+        @Image(source: "Alert Icon.png", alt: "An icon representing an alert")
+    }
+    
+    @Section(title: "Writing Testable Alert Controller Code") {
+        @ContentAndMedia {
+            In order to be able to test the alert controllers that our app 
+            presents, we have to ensure that we use the alert controller in a 
+            way that allows it to be testable. We will do this first and then 
+            look at how we can write alert controller tests.
+        }
+        
+        @Steps {
+            @Step {
+                In this example, we will look at a view controller that presents
+                an alert when an error is encountered. Let's start by adding the
+                function that will handle the error.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-1.swift)
+            }
+            
+            @Step {
+                Next we add the error handling behaviour. We set our view's 
+                background colour to `.red`, and create an alert that uses the
+                given error's `localizedDescription` as the alert's message. The
+                alert also has an action that, when triggered, sets the view's 
+                background colour back to `.systemBackground`.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-2.swift)
+            }
+            
+            @Step {
+                Finally, we present the alert. Note that we present the alert
+                from the view controller's parent, if it has one. This allows us
+                to capture the presented view controller easily in our tests.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-3.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing Alert Controller Behaviour") {
+        @ContentAndMedia {
+            Now that we have written code that uses an alert controller in a 
+            testable way, we can set about testing it.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, as well as one to an 
+                instance of ``DJATesting/PresentationCapturingViewController``, 
+                which is a generic view controller that allows us to capture 
+                view controllers of the type that the class is specialised to 
+                via its generic type parameter. In our case, we specialise it to
+                capture instances of `UIAlertController`.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-4.swift)
+            }
+            
+            @Step {
+                Next we add a function to create the view controller that we are 
+                testing, and embed it as a child of the presentation capturing 
+                view controller.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-5.swift)
+            }
+            
+            @Step {
+                Now we can add a test for the alert presentation. We inject the
+                error to be displayed, and capture the presented alert 
+                controller using the presentation capturing  view controller. We
+                are able to assert that the alert shows the correct title and 
+                message, and has the actions that we expect.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-6.swift)
+            }
+            
+            @Step {
+                Finally, we can also write tests for the alert controller's 
+                actions. Having captured the alert controller, we can access its 
+                `actions` array, and use DJATesting's `invokeHandler()` function 
+                on the actions. After invoking the "ok" action, we assert that 
+                it handler has the behaviour that we expect by checking our view
+                controller's view's `backgroundColor` property.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-7.swift)
+            }
+        }
+    }
+}

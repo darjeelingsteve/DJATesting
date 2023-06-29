@@ -16,4 +16,10 @@ final class MyViewControllerTests: XCTest {
         parentViewController = nil
         super.tearDown()
     }
+    
+    private func givenAViewController() {
+        myViewController = MyViewController()
+        parentViewController.addChild(myViewController)
+        myViewController.didMove(toParent: parentViewController)
+    }
 }
