@@ -1,4 +1,4 @@
-@Tutorial(time: 10) {
+@Tutorial(time: 5) {
     @Intro(title: "Testing UIAlertController Usage") {
         Alert controllers provide a simple way to present messages with actionable options to your users. By contrast, unit testing them can be far from straightforward. Learn how DJATesting makes unit testing your alerts anything but alarming.
         

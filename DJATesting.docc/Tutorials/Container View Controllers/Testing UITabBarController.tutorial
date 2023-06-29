@@ -1,4 +1,4 @@
-@Tutorial(time: 10) {
+@Tutorial(time: 5) {
     @Intro(title: "Testing UITabBarController") {
         `UITabBarController` is a common [container view controller](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html) used for organising an app's UI in compact size class environments. DJATesting allows for testing of tab bar controllers by providing a tab bar controller mock used to intercept the messages your app sends, including their parameters.
         

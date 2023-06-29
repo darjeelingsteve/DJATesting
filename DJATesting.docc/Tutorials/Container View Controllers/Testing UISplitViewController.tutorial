@@ -1,4 +1,4 @@
-@Tutorial(time: 10) {
+@Tutorial(time: 5) {
     @Intro(title: "Testing UISplitViewController") {
         `UISplitViewController` received a major update in iOS 14 with support for adaptive layouts via its [setViewController:forColumn:](https://developer.apple.com/documentation/uikit/uisplitviewcontroller/3580911-setviewcontroller) API, making it the go-to container view controller for adaptive user interfaces. DJATesting simplifies testing of `UISplitViewController`, making it easy to validate your split view controller interactions.
         

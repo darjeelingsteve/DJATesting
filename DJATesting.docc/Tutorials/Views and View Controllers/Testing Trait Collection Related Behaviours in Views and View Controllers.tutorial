@@ -1,4 +1,4 @@
-@Tutorial(time: 25) {
+@Tutorial(time: 10) {
     @Intro(title: "Testing Trait Collection Related Behaviours in Views and View Controllers") {
         Certain view or view controller behaviours are dependent upon the trait environment in which they are contained. See how DJATesting allows these behaviours to be controlled for and tested.
         

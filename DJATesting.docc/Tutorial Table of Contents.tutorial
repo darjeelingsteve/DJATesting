@@ -29,5 +29,6 @@
         @TutorialReference(tutorial: "doc:Testing-Custom-Views")
         @TutorialReference(tutorial: "doc:Testing-Trait-Collection-Related-Behaviours-in-Views-and-View-Controllers")
         @TutorialReference(tutorial: "doc:Testing-UIAlertController-Usage")
+        @TutorialReference(tutorial: "doc:Testing-UICollectionViewCompositionalLayout-Swipe-Actions")"
     }
 }

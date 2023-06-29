@@ -1,4 +1,4 @@
-@Tutorial(time: 10) {
+@Tutorial(time: 3) {
     @Intro(title: "Creating and Using JSON Test Data") {
         This tutorial shows you how to effortlessly load test JSON data using helpers provided by DJATesting. 
         

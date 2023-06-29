@@ -1,4 +1,4 @@
-@Tutorial(time: 10) {
+@Tutorial(time: 5) {
     @Intro(title: "Testing UINavigationController") {
         `UINavigationController` is one of the most commonly used [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html) in iOS development. DJATesting allows you test write tests that capture the messages your app sends to its navigation controllers along with their parameters, allowing you to unit test the navigation flow you've built for your users.
         

@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 8) {
     @Intro(title: "Testing Custom Views") {
         Learn how to test the implementations of your custom `UIView` subclasses, including their subviews.
         
