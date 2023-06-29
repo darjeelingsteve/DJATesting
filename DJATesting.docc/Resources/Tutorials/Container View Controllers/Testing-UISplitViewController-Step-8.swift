@@ -20,8 +20,8 @@ final class MainSceneViewControllerTests: XCTest {
     func testItShowsTheCorrectViewControllersWhenExpanded() {
         givenAViewController()
         whenTheViewLoads()
-        let primaryMenuViewController = childSplitViewController.receivedPrimaryColumnViewController as? MenuViewController
-        let secondaryHomeViewController = childSplitViewController.receivedSecondaryColumnViewController as? HomeViewController
+        let primaryMenuViewController = mockSplitViewController.receivedPrimaryColumnViewController as? MenuViewController
+        let secondaryHomeViewController = mockSplitViewController.receivedSecondaryColumnViewController as? HomeViewController
         XCTAssertNotNil(primaryMenuViewController)
         XCTAssertNotNil(secondaryHomeViewController)
     }
@@ -29,7 +29,7 @@ final class MainSceneViewControllerTests: XCTest {
     func testItShowsTheCorrectViewControllerWhenCollapsed() {
         givenAViewController()
         whenTheViewLoads()
-        let compactTabViewController = childSplitViewController.receivedCompactColumnViewController as? UITabBarController
+        let compactTabViewController = mockSplitViewController.receivedCompactColumnViewController as? UITabBarController
         XCTAssertNotNil(compactTabViewController)
         let homeTabViewController = compactTabViewController?.viewControllers?.first
         let menuTabViewController = compactTabViewController?.viewControllers?.last
