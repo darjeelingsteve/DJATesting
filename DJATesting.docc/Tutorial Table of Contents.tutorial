@@ -49,5 +49,6 @@
         @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
         
         @TutorialReference(tutorial: "doc:Testing-UIControl-Primary-Actions")
+        @TutorialReference(tutorial: "doc:Testing-UIGestureRecognizer-Interactions")
     }
 }
