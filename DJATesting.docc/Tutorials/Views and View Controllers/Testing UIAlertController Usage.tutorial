@@ -19,7 +19,7 @@
                 an alert when an error is encountered. Let's start by adding the
                 function that will handle the error.
                 
-                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-1.swift)
+                @Code(name: "MyViewController.swift", file: Testing-UIAlertController-Step-1.swift)
             }
             
             @Step {
@@ -29,7 +29,7 @@
                 alert also has an action that, when triggered, sets the view's 
                 background colour back to `.systemBackground`.
                 
-                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-2.swift)
+                @Code(name: "MyViewController.swift", file: Testing-UIAlertController-Step-2.swift)
             }
             
             @Step {
@@ -37,7 +37,7 @@
                 from the view controller's parent, if it has one. This allows us
                 to capture the presented view controller easily in our tests.
                 
-                @Code(name: "MyViewControllerTests.swift", file: Testing-UIAlertController-Step-3.swift)
+                @Code(name: "MyViewController.swift", file: Testing-UIAlertController-Step-3.swift)
             }
         }
     }
