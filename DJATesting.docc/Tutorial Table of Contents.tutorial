@@ -46,7 +46,7 @@
         testing of these crucial UI components, as well as interactions that 
         apply directly to views, such as gestures.
         
-        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+        @Image(source: "Interactions.png", alt: "An image representing a touch ineraction")
         
         @TutorialReference(tutorial: "doc:Testing-UIControl-Primary-Actions")
         @TutorialReference(tutorial: "doc:Testing-UIGestureRecognizer-Interactions")
