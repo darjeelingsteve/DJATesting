@@ -1,6 +1,7 @@
 @Tutorials(name: "Testing with DJATesting") {
     @Intro(title: "Writing Unit Tests with DJATesting") {
-        Learn how to take advantage of DJATesting to supercharge your unit tests.
+        Learn how to take advantage of DJATesting to supercharge your unit 
+        tests.
     }
     
     @Chapter(name: "Test Data") {
@@ -12,7 +13,12 @@
     }
     
     @Chapter(name: "Testing System-Provided Container View Controllers") {
-        Most of the information presented to users in applications is made navigable using system-provided [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html). Testing your application's usage of these view controllers allows you to verify what information is shown to your users, when it is shown, and how.
+        Most of the information presented to users in applications is made 
+        navigable using 
+        system-provided [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html). 
+        Testing your application's usage of these view controllers allows you to 
+        verify what information is shown to your users, when it is shown, and 
+        how.
         
         @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
         
@@ -22,7 +28,8 @@
     }
     
     @Chapter(name: "Testing Custom Views and View Controllers") {
-        DJATesting makes writing unit tests for your views and view controllers a breeze. Find out more in this chapter.
+        DJATesting makes writing unit tests for your views and view controllers 
+        a breeze. Find out more in this chapter.
         
         @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
         
@@ -31,5 +38,16 @@
         @TutorialReference(tutorial: "doc:Testing-UIAlertController-Usage")
         @TutorialReference(tutorial: "doc:Testing-UICollectionViewCompositionalLayout-Swipe-Actions")"
         @TutorialReference(tutorial: "doc:Testing-UIImage-consuming-APIs")"
+    }
+    
+    @Chapter(name: "Testing View and Control Interactions") {
+        `UIControl`'s provide the primary mechanisms by which user's trigger 
+        actions and manipulate data. DJATesting can be used to enable easy 
+        testing of these crucial UI components, as well as interactions that 
+        apply directly to views, such as gestures.
+        
+        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+        
+        @TutorialReference(tutorial: "doc:Testing-UIControl-Primary-Actions")
     }
 }
