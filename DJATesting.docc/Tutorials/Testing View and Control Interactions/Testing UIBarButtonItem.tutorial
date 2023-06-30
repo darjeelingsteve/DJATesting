@@ -1,0 +1,68 @@
+@Tutorial(time: 2) {
+    @Intro(title: "Testing UIBarButtonItem") {
+        Bar-button items have long been an anomaly - they are not views or 
+        controls, and yet they draw content and handle interaction. On first
+        glance, this may make it look like they're impossible to test, but
+        DJATesting makes it possible.
+        
+        @Image(source: "Interactions.png", alt: "An image representing a touch ineraction")
+    }
+    
+    @Section(title: "Using UIBarButtonItem") {
+        @ContentAndMedia {
+            Before we show how to test a `UIBarButtonItem`, first let's write
+            some code that uses one.
+        }
+        
+        @Steps {
+            @Step {
+                Our view controller configures its navigation item's right bar 
+                button item to contain a "save" bar button item.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UIBarButtonItem-01.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing UIBarButtonItem") {
+        @ContentAndMedia {
+            Now that we have written code that creates a bar button item, let's
+            look at how to test it.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, and a function to create one
+                for testing.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIBarButtonItem-02.swift)
+            }
+            
+            @Step {
+                Next we add an extension to make accessing the save bar button 
+                item easy.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIBarButtonItem-03.swift)
+            }
+            
+            @Step {
+                We can now add a test to verify that the bar button item is of
+                the correct system type, which we can check thanks to 
+                DJATesting's `systemItem` extension property on 
+                `UIBarButtonItem`.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIBarButtonItem-04.swift)
+            }
+            
+            @Step {
+                Finally, we can add a test to verify the behaviour that is 
+                triggered when the user taps on the bar button item. This is 
+                made possible by using the `simulateTap()` function provided by
+                DJATesting.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIBarButtonItem-05.swift)
+            }
+        }
+    }
+}

@@ -50,5 +50,6 @@
         
         @TutorialReference(tutorial: "doc:Testing-UIControl-Primary-Actions")
         @TutorialReference(tutorial: "doc:Testing-UIGestureRecognizer-Interactions")
+        @TutorialReference(tutorial: "doc:Testing-UIBarButtonItem")
     }
 }
