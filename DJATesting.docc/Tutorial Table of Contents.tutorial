@@ -64,4 +64,14 @@
         @TutorialReference(tutorial: "doc:Testing-Selection-Feedback")
         @TutorialReference(tutorial: "doc:Testing-Notification-Feedback")
     }
+    
+    @Chapter(name: "Testing Hardware Integration") {
+        As the iOS ecosystem has matured, hardware integration has been expanded
+        and plays a prominent role in user interaction for some apps. We can use
+        DJATesting to test these hardware integration points.
+        
+        @Image(source: "Hardware.png", alt: "An image representing hardware")
+        
+        @TutorialReference(tutorial: "doc:Testing-UIKeyCommand")
+    }
 }
