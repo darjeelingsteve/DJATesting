@@ -52,4 +52,15 @@
         @TutorialReference(tutorial: "doc:Testing-UIGestureRecognizer-Interactions")
         @TutorialReference(tutorial: "doc:Testing-UIBarButtonItem")
     }
+    
+    @Chapter(name: "Testing Haptic Feedback") {
+        Haptic feedback enhances the touch interface of applications, bringing 
+        them closer to the feeling of real world interactions. Learn how to use
+        DJATesting's mock haptic feedback controllers to test your application's
+        haptic integration.
+        
+        @Image(source: "Haptics.png", alt: "An image representing haptic feedback")
+        
+        @TutorialReference(tutorial: "doc:Testing-Selection-Feedback")
+    }
 }
