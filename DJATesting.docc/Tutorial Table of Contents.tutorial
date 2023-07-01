@@ -62,5 +62,6 @@
         @Image(source: "Haptics.png", alt: "An image representing haptic feedback")
         
         @TutorialReference(tutorial: "doc:Testing-Selection-Feedback")
+        @TutorialReference(tutorial: "doc:Testing-Notification-Feedback")
     }
 }
