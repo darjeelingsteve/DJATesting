@@ -1,4 +1,4 @@
-@Tutorials(name: "Testing with DJATesting") {
+@Tutorials(name: "DJATesting") {
     @Intro(title: "Writing Unit Tests with DJATesting") {
         Learn how to take advantage of DJATesting to supercharge your unit 
         tests.
