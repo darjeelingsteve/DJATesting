@@ -61,6 +61,7 @@
         @Image(source: "Collection View.png", alt: "An image representing a collection view")
         
         @TutorialReference(tutorial: "doc:Testing-UICollectionViewCompositionalLayout-Swipe-Actions")"
+        @TutorialReference(tutorial: "doc:Testing-UIListSeparatorConfiguration")"
     }
     
     @Chapter(name: "Testing Haptic Feedback") {

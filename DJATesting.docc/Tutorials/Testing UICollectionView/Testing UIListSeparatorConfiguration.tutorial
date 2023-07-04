@@ -1,0 +1,86 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Testing UIList​Separator​Configuration") {
+        `UICollectionView` has replaced `UITableView` as the recommended way to
+        provide list-based interfaces to your users. `UICollectionView` lists
+        contain powerful customisation features, such as the ability to modify
+        the visibility, colour, and dimensions of list separators. Here, we will
+        learn how DJATesting makes it possible to test your use of these APIs.
+        
+        @Image(source: "Collection View.png", alt: "An image representing a collection view")
+    }
+    
+    @Section(title: "Customising List Separators") {
+        @ContentAndMedia {
+            `UICollectionLayoutListConfiguration` has an `itemSeparatorHandler` 
+            property, which can be overriden to provide a 
+            `UIListSeparatorConfiguration`, allowing for list separators to be
+            customised. Let's look at an example of how this is used.
+        }
+        
+        @Steps {
+            @Step {
+                We start by creating a view controller that manages a collection
+                view.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UIListSeparatorConfiguration-01.swift)
+            }
+            
+            @Step {
+                Next we add the `itemSeparatorHandler` to our 
+                `UICollectionLayoutListConfiguration`. In it, we hide all bottom
+                separators, and hide the top separators for cells at index paths
+                whose `item` is `0`.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UIListSeparatorConfiguration-02.swift)
+            }
+            
+            @Step {
+                Finally, we add the collection view as a child view of the view
+                controller's view.
+                
+                Now we are ready to begin testing of our separator 
+                configuration.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UIListSeparatorConfiguration-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing List Separator Configuration") {
+        @ContentAndMedia {
+            We have a collection view list with customised separators - now it 
+            is time to test them.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, and a function to create it
+                that can be called from our test functions.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIListSeparatorConfiguration-04.swift)
+            }
+            
+            @Step {
+                Next we add an extension to `MyViewController` to allow us to
+                easily access its collection view and collection view layout 
+                using the technique detailed in <doc:Testing-Custom-Views>.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIListSeparatorConfiguration-05.swift)
+            }
+            
+            @Step {
+                Finally, we can also write a test to verify the behaviour when 
+                cells are vended ar different index paths. We can check that 
+                bottom separators are always hidden, and that the top separator
+                is hidden for the first item in a section.
+                
+                Note that we can use this technique to test all of the 
+                properties available in `UIListSeparatorConfiguration`, 
+                including the separator insets, colour, and visual effect.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIListSeparatorConfiguration-06.swift)
+            }
+        }
+    }
+}
