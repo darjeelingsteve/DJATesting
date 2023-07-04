@@ -36,7 +36,6 @@
         @TutorialReference(tutorial: "doc:Testing-Custom-Views")
         @TutorialReference(tutorial: "doc:Testing-Trait-Collection-Related-Behaviours-in-Views-and-View-Controllers")
         @TutorialReference(tutorial: "doc:Testing-UIAlertController-Usage")
-        @TutorialReference(tutorial: "doc:Testing-UICollectionViewCompositionalLayout-Swipe-Actions")"
         @TutorialReference(tutorial: "doc:Testing-UIImage-consuming-APIs")"
     }
     
@@ -51,6 +50,17 @@
         @TutorialReference(tutorial: "doc:Testing-UIControl-Primary-Actions")
         @TutorialReference(tutorial: "doc:Testing-UIGestureRecognizer-Interactions")
         @TutorialReference(tutorial: "doc:Testing-UIBarButtonItem")
+    }
+    
+    @Chapter(name: "Testing UICollectionView") {
+        `UICollectionView` is a staple UI component for developing simple 
+        list-based interfaces, to more complex UIs with custom layouts. 
+        DJATesting provides several helpers to aid in the testing of your
+        `UICollectionView` layout and interaction code paths.
+        
+        @Image(source: "Collection View.png", alt: "An image representing a collection view")
+        
+        @TutorialReference(tutorial: "doc:Testing-UICollectionViewCompositionalLayout-Swipe-Actions")"
     }
     
     @Chapter(name: "Testing Haptic Feedback") {
