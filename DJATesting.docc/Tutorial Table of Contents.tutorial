@@ -40,7 +40,7 @@
     }
     
     @Chapter(name: "Testing View and Control Interactions") {
-        `UIControl`'s provide the primary mechanisms by which user's trigger 
+        `UIControl`s provide the primary mechanisms by which users trigger 
         actions and manipulate data. DJATesting can be used to enable easy 
         testing of these crucial UI components, as well as interactions that 
         apply directly to views, such as gestures.
