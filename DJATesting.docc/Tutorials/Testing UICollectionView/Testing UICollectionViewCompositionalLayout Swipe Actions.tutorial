@@ -1,0 +1,102 @@
+@Tutorial(time: 5) {
+    @Intro(title: "Testing UICollectionView​Compositional​Layout Swipe Actions") {
+        Providing swipe actions in collection view lists is a great way to allow
+        your users to perform common actions quickly and easily. Unit testing 
+        these actions, however, might seem to be rather trickier than using 
+        them. We can use DJATesting to make swipe actions just as simple to test
+        as they are to use.
+        
+        @Image(source: "Swipe Actions.png", alt: "A collection view list whose items have swipe actions")
+    }
+    
+    @Section(title: "Building a Collection View with Swipe Actions") {
+        @ContentAndMedia {
+            To demonstrate how to test swipe actions, first we will build a view
+            controller containing a collection view that displays a list with
+            swipe actions.
+        }
+        
+        @Steps {
+            @Step {
+                We start by creating a view controller that manages a collection
+                view.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-01.swift)
+            }
+            
+            @Step {
+                Next we add the swipe actions to the layout configuration. In 
+                this case, we record the index path of the item on which the 
+                user triggers the "delete" swipe action.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-02.swift)
+            }
+            
+            @Step {
+                Finally, we add the collection view as a child view of the view
+                controller's view.
+                
+                Now we are ready to begin testing of our collection view swipe 
+                actions.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing Swipe Actions") {
+        @ContentAndMedia {
+            We have a collection view list with swipe actions - now it is time 
+            to test them.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, and a function to create it
+                that can be called from our test functions.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-04.swift)
+            }
+            
+            @Step {
+                Next we add an extension to `MyViewController` to allow us to
+                easily access its collection view and collection view layout 
+                using the technique detailed in <doc:Testing-Custom-Views>.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-05.swift)
+            }
+            
+            @Step {
+                Now we can add a function that allows us to access the trailing
+                swipe actions for a particular item's index path, using 
+                DJATesting's 
+                `-[NSCollectionLayoutSection trailingSwipeActionsConfigurationAtIndexPath:]`
+                function.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-06.swift)
+            }
+            
+            @Step {
+                This function allows us to write a test to assert that our
+                deletion swipe action has been configured correctly.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-07.swift)
+            }
+            
+            @Step {
+                Finally, we can also write a test to verify the behaviour when
+                the deletion swipe action is triggered by the user, by manually
+                invoking the deletion action's handler.
+                
+                Note that although here we have only tested trailing swipe 
+                actions, leading swipe actions may also be tested using the same
+                technique. The only difference is to call DJATesting's
+                `-[NSCollectionLayoutSection leadingSwipeActionsConfigurationAtIndexPath:]`
+                function instead of the variant for trailing swipe actions.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UICollectionView​CompositionalLayout-Swipe-Actions-08.swift)
+            }
+        }
+    }
+}

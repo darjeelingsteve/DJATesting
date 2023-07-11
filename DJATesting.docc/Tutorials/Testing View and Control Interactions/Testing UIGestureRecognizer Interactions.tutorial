@@ -1,0 +1,67 @@
+@Tutorial(time: 2) {
+    @Intro(title: "Testing UIGesture​Recognizer Interactions") {
+        Many app interactions revolve around gestures performed by the user. Be
+        it tapping, swiping, or panning, DJATesting makes testing gesture-based
+        interactions a doddle.
+        
+        @Image(source: "Interactions.png", alt: "An image representing a touch ineraction")
+    }
+    
+    @Section(title: "Using Gesture Recognisers to Detect Interaction") {
+        @ContentAndMedia {
+            In order to test interaction with a gesture recogniser, we will 
+            modify the previous example to use a `UITapGestureRecognizer`, 
+            rather than a `UIButton`.
+        }
+        
+        @Steps {
+            @Step {
+                Here we set up our view controller's view to include a
+                `UITapGestureRecognizer`. When the view is tapped, it's 
+                background colour is changed to `.systemRed`.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UIGestureRecognizer-Interactions-01.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing Gesture Recognition") {
+        @ContentAndMedia {
+            Now that we have written code that uses a gesture recogniser, we can
+            write tests for the interaction.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, and a function to create one
+                for testing.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIGestureRecognizer-Interactions-02.swift)
+            }
+            
+            @Step {
+                Next we add a function to simulate the user tapping on the view
+                controller's view. We make use of DJATesting's 
+                `dja_simulateGestureRecognition` extension function on 
+                `UIGestureRecognizer`.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIGestureRecognizer-Interactions-03.swift)
+            }
+            
+            @Step {
+                Now we can add a test for the behaviour when the user taps on 
+                the view.
+                
+                To simulate recognition of more complex gestures, such as pan 
+                gestures that fire continuously during recognition, use 
+                DJATesting's
+                `dja_simulateGestureRecognitionWithOverridenGestureRecogniser:`
+                function, passing in a gesture recogniser with the properties
+                set that you would like your gesture handling code to receive.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIGestureRecognizer-Interactions-04.swift)
+            }
+        }
+    }
+}

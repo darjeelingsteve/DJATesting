@@ -1,0 +1,65 @@
+@Tutorial(time: 2) {
+    @Intro(title: "Testing UIControl Primary Actions") {
+        The majority of `UIControl`s, both those included in Cocoa Touch and 
+        those created as custom components, signal the user's interaction by
+        sending the `.primaryActionTriggered` action. DJATesting provides a 
+        helper to make triggering these actions easy.
+        
+        @Image(source: "Interactions.png", alt: "An image representing a touch ineraction")
+    }
+    
+    @Section(title: "Using Controls with Primary Actions") {
+        @ContentAndMedia {
+            Before we start testing, let's build a UI that makes use of a common
+            control to trigger an action.
+        }
+        
+        @Steps {
+            @Step {
+                In this example, we will use a `UIButton` to change the 
+                background colour of a view controller's view. When the user 
+                taps the "danger" button, the background colour changes.
+                
+                @Code(name: "MyViewController.swift", file: Testing-UIControl-Primary-Actions-01.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing Controls with Primary Actions") {
+        @ContentAndMedia {
+            Now that we have written code that uses a control with a primary 
+            action, let's look at how we can test this interaction.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, and a function to create one
+                for testing.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIControl-Primary-Actions-02.swift)
+            }
+            
+            @Step {
+                Next we add a function to simulate the user tapping on the
+                danger button. We make use of DJATesting's 
+                `simulatePrimaryActionTriggered` extension function on 
+                `UIControl`. We access the view controller's "danger button" 
+                using the technique detailed in <doc:Testing-Custom-Views>.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIControl-Primary-Actions-03.swift)
+            }
+            
+            @Step {
+                Now we can add a test for the behaviour when the user taps on 
+                the danger button.
+                
+                Note that this testing technique will also work if the view
+                controller had used the traditional target/action mechanism for
+                handling the button tap, rather than the modern `UIAction` API.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-UIControl-Primary-Actions-04.swift)
+            }
+        }
+    }
+}

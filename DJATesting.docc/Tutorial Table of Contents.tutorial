@@ -1,0 +1,89 @@
+@Tutorials(name: "DJATesting") {
+    @Intro(title: "Writing Unit Tests with DJATesting") {
+        Learn how to take advantage of DJATesting to supercharge your unit 
+        tests.
+    }
+    
+    @Chapter(name: "Test Data") {
+        Good tests start with good test data.
+        
+        @Image(source: "Braces.png", alt: "Curly braces containing an ellipsis")
+        
+        @TutorialReference(tutorial: "doc:Creating-and-Using-JSON-Test-Data")
+    }
+    
+    @Chapter(name: "Testing System-Provided Container View Controllers") {
+        Most of the information presented to users in applications is made 
+        navigable using 
+        system-provided [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html). 
+        Testing your application's usage of these view controllers allows you to 
+        verify what information is shown to your users, when it is shown, and 
+        how.
+        
+        @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
+        
+        @TutorialReference(tutorial: "doc:Testing-UINavigationController")
+        @TutorialReference(tutorial: "doc:Testing-UISplitViewController")
+        @TutorialReference(tutorial: "doc:Testing-UITabBarController")
+    }
+    
+    @Chapter(name: "Testing Custom Views and View Controllers") {
+        DJATesting makes writing unit tests for your views and view controllers 
+        a breeze. Find out more in this chapter.
+        
+        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+        
+        @TutorialReference(tutorial: "doc:Testing-Custom-Views")
+        @TutorialReference(tutorial: "doc:Testing-Trait-Collection-Related-Behaviours-in-Views-and-View-Controllers")
+        @TutorialReference(tutorial: "doc:Testing-UIAlertController-Usage")
+        @TutorialReference(tutorial: "doc:Testing-UIImage-consuming-APIs")"
+    }
+    
+    @Chapter(name: "Testing View and Control Interactions") {
+        `UIControl`s provide the primary mechanisms by which users trigger 
+        actions and manipulate data. DJATesting can be used to enable easy 
+        testing of these crucial UI components, as well as interactions that 
+        apply directly to views, such as gestures.
+        
+        @Image(source: "Interactions.png", alt: "An image representing a touch ineraction")
+        
+        @TutorialReference(tutorial: "doc:Testing-UIControl-Primary-Actions")
+        @TutorialReference(tutorial: "doc:Testing-UIGestureRecognizer-Interactions")
+        @TutorialReference(tutorial: "doc:Testing-UIBarButtonItem")
+    }
+    
+    @Chapter(name: "Testing UICollectionView") {
+        `UICollectionView` is a staple UI component for developing simple 
+        list-based interfaces, to more complex UIs with custom layouts. 
+        DJATesting provides several helpers to aid in the testing of your
+        `UICollectionView` layout and interaction code paths.
+        
+        @Image(source: "Collection View.png", alt: "An image representing a collection view")
+        
+        @TutorialReference(tutorial: "doc:Testing-UICollectionViewCompositionalLayout-Swipe-Actions")"
+        @TutorialReference(tutorial: "doc:Testing-UIListSeparatorConfiguration")"
+    }
+    
+    @Chapter(name: "Testing Haptic Feedback") {
+        Haptic feedback enhances the touch interface of applications, bringing 
+        them closer to the feeling of real world interactions. Learn how to use
+        DJATesting's mock haptic feedback controllers to test your application's
+        haptic integration.
+        
+        @Image(source: "Haptics.png", alt: "An image representing haptic feedback")
+        
+        @TutorialReference(tutorial: "doc:Testing-Selection-Feedback")
+        @TutorialReference(tutorial: "doc:Testing-Impact-Feedback")
+        @TutorialReference(tutorial: "doc:Testing-Notification-Feedback")
+    }
+    
+    @Chapter(name: "Testing Hardware Integration") {
+        As the iOS ecosystem has matured, hardware integration has been expanded
+        and plays a prominent role in user interaction for some apps. We can use
+        DJATesting to test these hardware integration points.
+        
+        @Image(source: "Hardware.png", alt: "An image representing hardware")
+        
+        @TutorialReference(tutorial: "doc:Testing-UIKeyCommand")
+    }
+}

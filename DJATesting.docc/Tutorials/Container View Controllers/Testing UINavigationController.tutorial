@@ -1,0 +1,81 @@
+@Tutorial(time: 5) {
+    @Intro(title: "Testing UINavigationController") {
+        `UINavigationController` is one of the most commonly used [container view controllers](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html) in iOS development. DJATesting allows you test write tests that capture the messages your app sends to its navigation controllers along with their parameters, allowing you to unit test the navigation flow you've built for your users.
+        
+        @Image(source: "Container View Controller Icon.png", alt: "An icon representing a container view controller")
+    }
+    
+    @Section(title: "Build a View Controller Hierarchy with a Child Navigation Controller") {
+        @ContentAndMedia {
+            In order to test our navigation controller usage, we first need to build a view controller hierarchy that contains a navigation controller. We will create `UserViewController`, a container view controller that will contain a child navigation controller, whose view controllers will be controlled by the parent `UserViewController`.
+        }
+        
+        @Steps {
+            @Step {
+                First we create `UserViewController`. In its initialiser, we take the `User` whose details will be displayed, and the navigation controller that will be managed in the `UserViewController`. The navigation controller is a parameter so that it can be replaced with a mock in the unit tests.
+                
+                @Code(name: "UserViewController.swift", file: Testing-UINavigationController-Step-1.swift)
+            }
+            
+            @Step {
+                Next we add the navigation controller as a child when the view loads.
+                
+                @Code(name: "UserViewController.swift", file: Testing-UINavigationController-Step-2.swift)
+            }
+            
+            @Step {
+                We then create an instance of `UserDetailsViewController` and place it at the root of our navigation controller. This view controller is responsible for showing the user details.
+                
+                @Code(name: "UserViewController.swift", file: Testing-UINavigationController-Step-3.swift)
+            }
+            
+            @Step {
+                Finally we become the delegate of the `UserDetailsViewController` that we just created. It has one delegate method that requests that an email be sent to the user being displayed. In response to this message we create an `EmailViewController` and push it on to our child navigation controller.
+                
+                In summary, we have successfully installed a child navigation controller, configured its root view controller, and pushed another view controller on to it in response to a delegate message. Next we will see how to test these interactions.
+                
+                @Code(name: "UserViewController.swift", file: Testing-UINavigationController-Step-4.swift)
+            }
+        }
+    }
+        
+    @Section(title: "Testing the Navigation Controller Interactions") {
+        @ContentAndMedia {
+            Now we will see how easy it is to test our navigation controller usage with DJATesting.
+        }
+        
+        @Steps {
+            @Step {
+                We begin by creating a test case for the `UserViewController` we created earlier.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-UINavigationController-Step-5.swift)
+            }
+            
+            @Step {
+                We add a property for the view controller being tested, as well as create an instance of ``DJATesting/MockNavigationController``. This is a subclass of UINavigationController that allows us to inspect the messages and parameters sent to the navigation controller.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-UINavigationController-Step-6.swift)
+            }
+            
+            @Step {
+                Next we add the functions that we will need to start testing our view controller. Note the mock navigation controller being injected in the `UserViewController` initialiser. We load the test data using the technique from <doc:Creating-and-Using-JSON-Test-Data>.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-UINavigationController-Step-7.swift)
+            }
+            
+            @Step {
+                Now we can add a test to verify that `UserDetailsViewController` shows an instance of `UserDetailsViewController` at the root of the navigation hierarchy. We can also check that the user details view controller has been configured correctly.
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-UINavigationController-Step-8.swift)
+            }
+            
+            @Step {
+                Finally, we add another test, this time verifying the behaviour when the user details view controller requests that an email be sent to the displayed user. Using the ``DJATesting/MockNavigationController/pushedViewController`` property of ``DJATesting/MockNavigationController`` we can access the view controller that was pushed on to the navigation stack and check that it has been configured correctly.
+                
+                `MockNavigationController` allows for all `UINavigationController` behaviour to be verified in unit tests. Review the ``DJATesting/MockNavigationController`` documentation to see how this can be achieved. 
+                
+                @Code(name: "UserViewControllerTests.swift", file: Testing-UINavigationController-Step-9.swift)
+            }
+        }
+    }
+}

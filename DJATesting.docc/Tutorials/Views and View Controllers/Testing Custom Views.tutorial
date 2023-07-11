@@ -1,0 +1,81 @@
+@Tutorial(time: 8) {
+    @Intro(title: "Testing Custom Views") {
+        Learn how to test the implementations of your custom `UIView` subclasses, including their subviews.
+        
+        @Image(source: "View Controller Icon.png", alt: "An icon representing a view controller")
+    }
+    
+    @Section(title: "Setting Up Views for Testing") {
+        @ContentAndMedia {
+            To be able to write unit tests for custom UIView subclasses, we need to write our views in such a way as to make them testable. We should be careful to do this in a way that does not expose implementation details of the view in the view's public interface, but still allows us to test the view's implementation. We will see how to do this in the following section.
+        }
+        
+        @Steps {
+            @Step {
+                We start by creating a custom view subclass. This view, `UserView`, will display a user as defined by the `User` model discussed in the previous tutorial <doc:Creating-and-Using-JSON-Test-Data>. The view contains a `user` property, which will contain the user data that the view displays.
+                
+                @Code(name: "UserView.swift", file: Setting-Up-Views-for-Testing-Step-1.swift)
+            }
+            
+            @Step {
+                Next, we add an initialiser to allow the user data to be passed to the view.
+                
+                @Code(name: "UserView.swift", file: Setting-Up-Views-for-Testing-Step-2.swift)
+            }
+            
+            @Step {
+                Now we add properties for the view's subviews. Note that they are private to the view.
+                
+                @Code(name: "UserView.swift", file: Setting-Up-Views-for-Testing-Step-3.swift)
+            }
+            
+            @Step {
+                This step is crucial - we add values for the subview's `accessibilityIdentifier` properties. We will use these later on when writing tests to gain direct access to the view's subviews.
+                
+                @Code(name: "UserView.swift", file: Setting-Up-Views-for-Testing-Step-4.swift)
+            }
+            
+            @Step {
+                Finally we add the logic to the view to display the given user data in its subviews.
+                
+                Now that we have completed our view, we are ready to start testing.
+                
+                @Code(name: "UserView.swift", file: Setting-Up-Views-for-Testing-Step-5.swift)
+            }
+        }
+    }
+        
+    @Section(title: "Writing Unit Tests for Views") {
+        @ContentAndMedia {
+            With a sample view implementation complete, let's see how easy DJATesting makes it to write the unit tests.
+        }
+        
+        @Steps {
+            @Step {
+                Start by creating a test case for the view.
+                
+                @Code(name: "UserViewTests.swift", file: Writing-Unit-Tests-for-Views-1.swift)
+            }
+            
+            @Step {
+                Next, we create a private extension for the view class being tested. In this extension, we add computed properties to access the subviews that we created earlier.
+                
+                The subviews are private properties of `UserView`, but we can access them using the `accessibilityIdentifier`s that we set earlier using DJATesting's subview-finding helper function.
+                
+                @Code(name: "UserViewTests.swift", file: Writing-Unit-Tests-for-Views-2.swift)
+            }
+            
+            @Step {
+                Now we need to create an instance of `UserView`. To do this, we need a `User` to populate it with. We create a user using the JSON test data loading technique described in <doc:Creating-and-Using-JSON-Test-Data>.
+                
+                @Code(name: "UserViewTests.swift", file: Writing-Unit-Tests-for-Views-3.swift)
+            }
+            
+            @Step {
+                Our view is now configured with data and ready for testing. We can write test functions that use the computed properties we created earlier to access the `UserView`'s subviews and make assertions about their state.
+                
+                @Code(name: "UserViewTests.swift", file: Writing-Unit-Tests-for-Views-4.swift)
+            }
+        }
+    }
+}

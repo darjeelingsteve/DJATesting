@@ -1,0 +1,86 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Testing Notification Feedback") {
+        Sometimes our apps need to show notifications to the user, for example 
+        to let them know when a process has completed, or an error has occured.
+        `UINotificationFeedbackGenerator` allows us to provide appropriate
+        haptics in these scenarios. We can use DJATesting to test our usage of
+        these haptics.
+        
+        @Image(source: "Haptics.png", alt: "An image representing haptic feedback")
+    }
+    
+    @Section(title: "Providing Notification Feedback") {
+        @ContentAndMedia {
+            Let's start by creating a hypothetical notification display 
+            controller, that will manage showing notifications to users in our
+            app's UI.
+        }
+        
+        @Steps {
+            @Step {
+                First, let's create `NotificationDisplayController`, which has
+                two properties - a view controller in which we will show visible
+                notification elements, and a notification feedback generator.
+                Both of these properties are populated during initialisation.
+                
+                @Code(name: "NotificationDisplayController.swift", file: Testing-Notification-Feedback-01.swift)
+            }
+            
+            @Step {
+                Next, we add our Notification payload data type. Note that our
+                notifications come in two styles - `.info` and `.error`.
+                
+                @Code(name: "NotificationDisplayController.swift", file: Testing-Notification-Feedback-02.swift)
+            }
+            
+            @Step {
+                Finally, we add a function that instructs the controller to 
+                display a notification. It uses the notification's `style` to
+                determine which haptic feedback style is appropriate.
+                
+                The detail of displaying the notification UI are beyond the 
+                scope of this example.
+                
+                @Code(name: "NotificationDisplayController.swift", file: Testing-Notification-Feedback-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing Notification Feedback") {
+        @ContentAndMedia {
+            Now it is time to test our `NotificationDisplayController` to make 
+            sure that it uses notification feedback haptics as we intend.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our notification controller, and a function to 
+                create one for testing. We also create an instance of DJATesting's 
+                `MockNotificationFeedbackGenerator`, which is injected in to the 
+                initialiser of the `NotificationDisplayController` being tested.
+                
+                @Code(name: "NotificationDisplayControllerTests.swift", file: Testing-Notification-Feedback-04.swift)
+            }
+            
+            @Step {
+                Next we add a function to simulate a notification being sent to
+                the controller.
+                
+                @Code(name: "NotificationDisplayControllerTests.swift", file: Testing-Notification-Feedback-05.swift)
+            }
+            
+            @Step {
+                Now we add our tests for the behaviour when the controller 
+                receives a notification. We verify that both the `.info` and 
+                `.error` notification styles trigger the expected notification 
+                haptics by  asserting that the mock notification feedback 
+                generator's 
+                ``DJATesting/MockNotificationFeedbackGenerator/receivedNotificationType``
+                property contains the expected notification type.
+                
+                @Code(name: "NotificationDisplayControllerTests.swift", file: Testing-Notification-Feedback-06.swift)
+            }
+        }
+    }
+}

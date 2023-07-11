@@ -30,6 +30,7 @@
 		48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */; };
 		48A311A726676FC30073C0AB /* MockImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */; };
 		48A311AE266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */; };
+		48B8943B27A0383B006D3A84 /* DJATesting.docc in Sources */ = {isa = PBXBuildFile; fileRef = 48B8943A27A0383B006D3A84 /* DJATesting.docc */; };
 		48BDDB672796AFC2004320FF /* DJATesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BDDB662796AFC2004320FF /* DJATesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D0D6ED265445A500538973 /* UIControl+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E7265445A500538973 /* UIControl+Testing.swift */; };
 		48D0D6EE265445A500538973 /* UIGestureRecognizer+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0D6E8265445A500538973 /* UIGestureRecognizer+Testing.m */; };
@@ -63,6 +64,7 @@
 		48A311A126676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSelectionFeedbackGenerator.swift; sourceTree = "<group>"; };
 		48A311A626676FC30073C0AB /* MockImpactFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImpactFeedbackGenerator.swift; sourceTree = "<group>"; };
 		48A311AD266770CF0073C0AB /* MockNotificationFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationFeedbackGenerator.swift; sourceTree = "<group>"; };
+		48B8943A27A0383B006D3A84 /* DJATesting.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DJATesting.docc; sourceTree = "<group>"; };
 		48BDDB662796AFC2004320FF /* DJATesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJATesting.h; sourceTree = "<group>"; };
 		48D0D6C126543B5500538973 /* DJATesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJATesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D0D6E7265445A500538973 /* UIControl+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Testing.swift"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				48D0D6E5265445A500538973 /* Sources */,
+				48B8943A27A0383B006D3A84 /* DJATesting.docc */,
 				48BDDB662796AFC2004320FF /* DJATesting.h */,
 				48D0D6C226543B5500538973 /* Products */,
 			);
@@ -273,6 +276,7 @@
 				48145D7C265C02B4002B351C /* MockPresentationViewController.swift in Sources */,
 				488ACA8328DB19BF007E7E9F /* NSObject+ForcedInit.swift in Sources */,
 				485B456426EA228E00CF1F91 /* UIKeyCommand+Testing.swift in Sources */,
+				48B8943B27A0383B006D3A84 /* DJATesting.docc in Sources */,
 				48D0D6EF265445A500538973 /* UIImage+Testing.swift in Sources */,
 				48A311A226676F2C0073C0AB /* MockSelectionFeedbackGenerator.swift in Sources */,
 				48943DDE26C1830700299FB4 /* TraitCollectionOverridingViewController.swift in Sources */,
@@ -429,6 +433,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DOCC_HOSTING_BASE_PATH = DJATesting;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -443,6 +448,7 @@
 				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darjeeling.DJATesting;
 				PRODUCT_NAME = DJATesting;
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -461,6 +467,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DOCC_HOSTING_BASE_PATH = DJATesting;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -475,6 +482,7 @@
 				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.darjeeling.DJATesting;
 				PRODUCT_NAME = DJATesting;
+				RUN_DOCUMENTATION_COMPILER = YES;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_VERSION = 5.0;

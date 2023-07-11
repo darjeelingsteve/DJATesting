@@ -1,0 +1,72 @@
+@Tutorial(time: 2) {
+    @Intro(title: "Testing UIImage-consuming APIs") {
+        Images are often used to liven-up the interfaces of our apps, as well as
+        show pictorial data. In this tutorial we will show how DJATesting makes
+        it easy to test APIs that make use of `UIImage`.
+        
+        @Image(source: "Images.png", alt: "The SF Symbols app, displaying the symbol for a photo")
+    }
+    
+    @Section(title: "Creating a View with a UIImage API") {
+        @ContentAndMedia {
+            Let's begin by creating a view that shows a `UIImage` using a child
+            `UIImageView`.
+        }
+        
+        @Steps {
+            @Step {
+                We start by creating the `UIImageView` that will be used to 
+                display the image, and pin it to our view's 
+                `directionalLayoutMargin`. Setting the layout margin will allow 
+                the image to be surrounded by a border.
+                
+                @Code(name: "BorderedImageView.swift", file: Testing-UIImage-consuming-APIs-01.swift)
+            }
+            
+            @Step {
+                Next we add an `image` property to our view, which allows the
+                displayed image to be set.
+                
+                We are now ready to test this view.
+                
+                @Code(name: "BorderedImageView.swift", file: Testing-UIImage-consuming-APIs-02.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing the Displayed Image") {
+        @ContentAndMedia {
+            We have a view with a `UIImage`-consuming API - now let's test it.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view, and a function to create it
+                that can be called from our test functions.
+                
+                @Code(name: "BorderedImageViewTests.swift", file: Testing-UIImage-consuming-APIs-03.swift)
+            }
+            
+            @Step {
+                Next we add an extension to `BorderedImageView` to allow us to
+                easily access its child `UIImageView` using the technique 
+                detailed in <doc:Testing-Custom-Views>.
+                
+                @Code(name: "BorderedImageViewTests.swift", file: Testing-UIImage-consuming-APIs-04.swift)
+            }
+            
+            @Step {
+                Finally, we write a test to verify that the image passed to our
+                view's `image` property is displayed in the child image view.
+                DJATesting's `+[UIImage imageOfColour:size:]` function allows us
+                to create an image of any colour for any size. This  allows us 
+                to easily verify that images are displayed as we  expect, 
+                without having to manage dummy image files within our test 
+                bundles.
+                
+                @Code(name: "BorderedImageViewTests.swift", file: Testing-UIImage-consuming-APIs-05.swift)
+            }
+        }
+    }
+}

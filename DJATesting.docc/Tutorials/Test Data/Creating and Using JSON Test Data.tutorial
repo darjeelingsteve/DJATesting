@@ -1,0 +1,71 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Creating and Using JSON Test Data") {
+        This tutorial shows you how to effortlessly load test JSON data using helpers provided by DJATesting. 
+        
+        @Image(source: "Braces.png", alt: "Curly braces containing an ellipsis")
+    }
+    
+    @Section(title: "Creating Test Data") {
+        @ContentAndMedia {
+            Before we load test data, we need to create it.
+        }
+        
+        @Steps {
+            @Step {
+                Identify the application model that will be used in your tests. Here we have a simple `User` model, containing details about a user. Make sure that the model conforms to the `Decodable` protocol.
+                
+                @Code(name: "User.swift", file: Creating-Test-Data-Step-1.swift)
+            }
+            
+            @Step {
+                Create a JSON file containing dummy data for your model. Here we have an array containing user data. Add the dummy data file to your testing target.
+                
+                @Code(name: "DummyUsers.json", file: Creating-Test-Data-Step-2.json)
+            }
+        }
+    }
+        
+    @Section(title: "Using Test Data") {
+        @ContentAndMedia {
+            Now that we have our test data, let's use it in a unit test.
+        }
+        
+        @Steps {
+            @Step {
+                Create a unit test case for the object you wish to test. Here we are testing `UserListDataSource`, which is a diffable datasource used to display user data in a collection view.
+                
+                @Code(name: "UserListDataSourceTests.swift", file: Using-Test-Data-Step-1.swift)
+            }
+            
+            @Step {
+                Next, add the fixtures you need to create the unit tests. We will need a datasource and a collection view.
+                
+                @Code(name: "UserListDataSourceTests.swift", file: Using-Test-Data-Step-2.swift)
+            }
+            
+            @Step {
+                Now we add a function that creates the datasource that we are going to write tests for.
+                
+                @Code(name: "UserListDataSourceTests.swift", file: Using-Test-Data-Step-3.swift)
+            }
+            
+            @Step {
+                Add a function to load the dummy data in to the data source. Here we make use of DJATesting's helper function to decode the JSON we wrote earlier in to an array of our `User` structs. We then set this array on our datasource's `users` property. Note that we must specify the bundle where the JSON file can be found, which is in our unit test target's bundle.
+                
+                @Code(name: "UserListDataSourceTests.swift", file: Using-Test-Data-Step-4.swift)
+            }
+            
+            @Step {
+                Now that we have a way to create a datasource and assign our dummy user data to it, we can write a test. Here we assert that the datasource produces a snapshot containing the `.users` section, which should contain two items as this would match the dummy user data that we created in our JSON file.
+                
+                @Code(name: "UserListDataSourceTests.swift", file: Using-Test-Data-Step-5.swift)
+            }
+            
+            @Step {
+                Finally, don't forget to tidy up after yourself.
+                
+                @Code(name: "UserListDataSourceTests.swift", file: Using-Test-Data-Step-6.swift)
+            }
+        }
+    }
+}
