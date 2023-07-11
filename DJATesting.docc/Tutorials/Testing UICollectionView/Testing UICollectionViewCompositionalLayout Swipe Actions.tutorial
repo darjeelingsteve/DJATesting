@@ -9,7 +9,7 @@
         @Image(source: "Swipe Actions.png", alt: "A collection view list whose items have swipe actions")
     }
     
-    @Section(title: "Writing Testable Alert Controller Code") {
+    @Section(title: "Building a Collection View with Swipe Actions") {
         @ContentAndMedia {
             To demonstrate how to test swipe actions, first we will build a view
             controller containing a collection view that displays a list with
