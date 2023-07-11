@@ -1,0 +1,80 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Testing Impact Feedback") {
+        Providing feedback when user interface items meet boundaries or colide
+        can help to improve the sense of realism in our UIs. Ensuring that this
+        realism is appropriate and delivered when expected is something that
+        DJATesting can help with.
+        
+        @Image(source: "Haptics.png", alt: "An image representing haptic feedback")
+    }
+    
+    @Section(title: "Providing Impact Feedback") {
+        @ContentAndMedia {
+            To demonstrate how to test impact feedback, first we will build a 
+            view controller containing a scroll view that we will give impact 
+            feedback for when it is scrolled to the top.
+        }
+        
+        @Steps {
+            @Step {
+                We start by creating a view controller that takes an impact 
+                feedback generator as a parameter during initialisation. This 
+                will allow us to inject a mock during testing.
+                
+                @Code(name: "MyViewController.swift", file: Testing-Impact-Feedback-01.swift)
+            }
+            
+            @Step {
+                Next we create a scroll view and add it to the view hierarchy.
+                
+                @Code(name: "MyViewController.swift", file: Testing-Impact-Feedback-02.swift)
+            }
+            
+            @Step {
+                Finally, we become the delegate of the scroll view, and respond
+                to scroll to top action by generating impact feedback.
+                
+                Now we are ready to begin the testing of our feedback.
+                
+                @Code(name: "MyViewController.swift", file: Testing-Impact-Feedback-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "Testing Impact Feedback") {
+        @ContentAndMedia {
+            Now that we have behaviour that makes use of impact feedback, it's 
+            time to test it.
+        }
+        
+        @Steps {
+            @Step {
+                First we will set up our test case. We will need a reference to
+                an instance of our view controller, and a function to create it
+                that can be called from our test functions. We also create our 
+                mock impact feedback generator, and pass it to the view 
+                controller during initialisation.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-Impact-Feedback-04.swift)
+            }
+            
+            @Step {
+                Next we add an extension to `MyViewController` to allow us to
+                easily access its scroll view using the technique detailed in 
+                <doc:Testing-Custom-Views>. We also add a function to simulate 
+                the user scrolling to the top of the scroll view.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-Impact-Feedback-05.swift)
+            }
+            
+            @Step {
+                Finally, we create a test that uses the function we just added
+                to simulate a scroll to top action, then checks with our mock
+                impact feedback generator to test that it received the 
+                `impactOccurred` message as we expect.
+                
+                @Code(name: "MyViewControllerTests.swift", file: Testing-Impact-Feedback-06.swift)
+            }
+        }
+    }
+}
