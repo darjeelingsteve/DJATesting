@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "DJATesting_ObjC", path: "Sources/DJATesting/ObjC"),
+        .target(name: "DJATesting_ObjC", path: "Sources/DJATesting/ObjC", publicHeadersPath: "."),
         .target(name: "DJATesting", dependencies: ["DJATesting_ObjC"], exclude: ["ObjC"])
     ],
     swiftLanguageVersions: [.v5]
