@@ -20,11 +20,15 @@ public extension UIBarButtonItem {
     
     /// Simulates the user tapping on the receiver.
     func simulateTap() {
-        guard let action = action else { return }
-        if action.description.contains(":") {
-            _ = target?.perform(action, with: self)
-        } else {
-            _ = target?.perform(action)
+        if #available(iOS 13.0, *), let uiAction = value(forKey: "_primaryAction") as? UIAction {
+            uiAction.invokeHandler()
+        }
+        else if let action = action {
+            if action.description.contains(":") {
+                _ = target?.perform(action, with: self)
+            } else {
+                _ = target?.perform(action)
+            }
         }
     }
 }
