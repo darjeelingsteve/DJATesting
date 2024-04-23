@@ -163,11 +163,16 @@ public class MockSplitViewController: UISplitViewController {
     }
     
     /// The mock transition coordinator returned by the receiver's
-    /// `transitionCoordinator` property.
+    /// ``transitionCoordinator`` property when
+    /// ``usesMockTransitionCoordinator`` is `true`.
     public let mockTransitionCoordinator = MockTransitionCoordinator()
     
+    /// A `Boolean` value determining whether ``mockTransitionCoordinator`` will
+    /// be returned from ``transitionCoordinator`` or not. Defaults to `true`.
+    public var usesMockTransitionCoordinator = true
+    
     public override var transitionCoordinator: UIViewControllerTransitionCoordinator? {
-        return mockTransitionCoordinator
+        return usesMockTransitionCoordinator ? mockTransitionCoordinator : super.transitionCoordinator
     }
 }
 
